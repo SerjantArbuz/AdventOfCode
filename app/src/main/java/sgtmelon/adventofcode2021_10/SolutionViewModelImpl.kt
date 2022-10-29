@@ -9,7 +9,7 @@ import sgtmelon.adventofcode2021_10.model.LineType
 import sgtmelon.adventofcode2021_10.useCase.GetLineTypeUseCase
 import sgtmelon.adventofcode2021_10.useCase.SplitTextUseCase
 
-class SolutionViewModel(
+class SolutionViewModelImpl(
     private val splitText: SplitTextUseCase,
     private val getLineType: GetLineTypeUseCase
 ) : ViewModel() {

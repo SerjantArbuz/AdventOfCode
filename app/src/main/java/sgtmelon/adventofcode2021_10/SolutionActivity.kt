@@ -9,7 +9,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SolutionActivity : AppCompatActivity() {
 
-    private val viewModel: SolutionViewModel by viewModel()
+    private val viewModel: SolutionViewModelImpl by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

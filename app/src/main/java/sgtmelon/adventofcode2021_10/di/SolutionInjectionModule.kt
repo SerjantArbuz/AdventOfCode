@@ -11,7 +11,7 @@ object SolutionInjectionModule {
     val module = module {
 
         viewModel {
-            SolutionViewModelImpl(get(), get())
+            SolutionViewModelImpl(PuzzleInput.input, get(), get())
         }
 
         factory {

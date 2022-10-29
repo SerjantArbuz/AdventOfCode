@@ -2,23 +2,23 @@ package sgtmelon.adventofcode2021_10
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.lifecycleScope
-import sgtmelon.adventofcode2021_10.databinding.ActivityMainBinding
 import sgtmelon.adventofcode2021_10.utils.inflateBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import sgtmelon.adventofcode2021_10.databinding.ActivitySolutionBinding
 
 class SolutionActivity : AppCompatActivity() {
 
-    private val viewModel: SolutionViewModelImpl by viewModel()
+    private val viewModel: SolutionViewModel by viewModel<SolutionViewModelImpl>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = inflateBinding<ActivityMainBinding>(R.layout.activity_main)
+        val binding = inflateBinding<ActivitySolutionBinding>(R.layout.activity_solution)
 
-        lifecycleScope.launchWhenResumed {
-            viewModel.getResult(PuzzleInput.input).collect {
-                binding.resultText.text = it.toString()
-            }
+        viewModel.firstPartPoints.observe(this) {
+            binding.resultFirstText.text = it.toString()
+        }
+        viewModel.secondPartPoints.observe(this) {
+            binding.resultSecondText.text = it.toString()
         }
     }
 }

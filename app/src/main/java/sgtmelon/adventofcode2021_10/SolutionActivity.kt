@@ -2,6 +2,7 @@ package sgtmelon.adventofcode2021_10
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.viewModels
 
 class SolutionActivity : AppCompatActivity() {

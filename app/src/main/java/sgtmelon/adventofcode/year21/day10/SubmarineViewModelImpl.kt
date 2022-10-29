@@ -11,14 +11,14 @@ import sgtmelon.adventofcode.year21.day10.useCase.GetLineTypeUseCase
 import sgtmelon.adventofcode.year21.day10.useCase.GetMiddleValueUseCase
 import sgtmelon.adventofcode.year21.day10.useCase.SplitTextUseCase
 
-class SolutionViewModelImpl(
+class SubmarineViewModelImpl(
     private val input: String,
     private val splitText: SplitTextUseCase,
     private val getLineType: GetLineTypeUseCase,
     private val getIncompletePoints: GetIncompletePointsUseCase,
     private val getMiddleValue: GetMiddleValueUseCase
 ) : ViewModel(),
-    SolutionViewModel {
+    SubmarineViewModel {
 
     init {
         viewModelScope.launch(Dispatchers.IO) { calculatePoints() }

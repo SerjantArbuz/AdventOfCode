@@ -12,9 +12,9 @@ import sgtmelon.adventofcode.databinding.ActivitySolutionBinding
  *
  * https://adventofcode.com/2021/day/10
  */
-class SolutionActivity : AppCompatActivity() {
+class SubmarineActivity : AppCompatActivity() {
 
-    private val viewModel: SolutionViewModel by viewModel<SolutionViewModelImpl>()
+    private val viewModel: SubmarineViewModel by viewModel<SubmarineViewModelImpl>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

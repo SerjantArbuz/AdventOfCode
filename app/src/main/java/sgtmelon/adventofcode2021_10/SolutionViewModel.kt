@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 
 interface SolutionViewModel {
 
-    val firstPartPoints: LiveData<Int>
+    val corruptedPoints: LiveData<Int>
 
-    val secondPartPoints: LiveData<Int>
+    val incompletePoints: LiveData<Int>
 }

@@ -9,11 +9,16 @@ sealed class Bracket(val char: Char) {
         object Corner : Open(char = '<', Close.Corner)
     }
 
-    sealed class Close(char: Char, val point: Int) : Bracket(char) {
-        object Round : Close(char = ')', point = 3)
-        object Square : Close(char = ']', point = 57)
-        object Curly : Close(char = '}', point = 1197)
-        object Corner : Close(char = '>', point = 25137)
+    sealed class Close(
+        char: Char,
+        val corruptedPoint: Int,
+        val incompletePoints: Int
+    ) : Bracket(char) {
+
+        object Round : Close(char = ')', corruptedPoint = 3, incompletePoints = 1)
+        object Square : Close(char = ']', corruptedPoint = 57, incompletePoints = 2)
+        object Curly : Close(char = '}', corruptedPoint = 1197, incompletePoints = 3)
+        object Corner : Close(char = '>', corruptedPoint = 25137, incompletePoints = 4)
     }
 
     companion object {

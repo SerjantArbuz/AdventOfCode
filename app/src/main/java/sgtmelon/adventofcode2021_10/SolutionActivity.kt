@@ -14,10 +14,10 @@ class SolutionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = inflateBinding<ActivitySolutionBinding>(R.layout.activity_solution)
 
-        viewModel.firstPartPoints.observe(this) {
+        viewModel.corruptedPoints.observe(this) {
             binding.resultFirstText.text = it.toString()
         }
-        viewModel.secondPartPoints.observe(this) {
+        viewModel.incompletePoints.observe(this) {
             binding.resultSecondText.text = it.toString()
         }
     }

@@ -23,7 +23,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/result_first_text"
+            android:id="@+id/corrupted_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/result_loading"
@@ -35,7 +35,7 @@
             tools:text="@tools:sample/lorem" />
 
         <TextView
-            android:id="@+id/result_second_text"
+            android:id="@+id/incomplete_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/result_loading"

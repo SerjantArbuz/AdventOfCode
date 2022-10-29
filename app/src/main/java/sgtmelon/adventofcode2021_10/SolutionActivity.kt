@@ -15,10 +15,10 @@ class SolutionActivity : AppCompatActivity() {
         val binding = inflateBinding<ActivitySolutionBinding>(R.layout.activity_solution)
 
         viewModel.corruptedPoints.observe(this) {
-            binding.resultFirstText.text = it.toString()
+            binding.corruptedText.text = it.toString()
         }
         viewModel.incompletePoints.observe(this) {
-            binding.resultSecondText.text = it.toString()
+            binding.incompleteText.text = it.toString()
         }
     }
 }

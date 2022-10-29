@@ -6,5 +6,5 @@ interface SolutionViewModel {
 
     val corruptedPoints: LiveData<Int>
 
-    val incompletePoints: LiveData<Int>
+    val incompletePoints: LiveData<Long>
 }

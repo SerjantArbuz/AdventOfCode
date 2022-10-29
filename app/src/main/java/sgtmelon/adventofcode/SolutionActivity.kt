@@ -6,6 +6,9 @@ import sgtmelon.adventofcode.utils.inflateBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import sgtmelon.adventofcode.databinding.ActivitySolutionBinding
 
+/**
+ * 2021 Day 10. Takes around ~2 hours for both puzzle parts.
+ */
 class SolutionActivity : AppCompatActivity() {
 
     private val viewModel: SolutionViewModel by viewModel<SolutionViewModelImpl>()

@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">AdventOfCode2021-10</string>
+
+    <string name="app_name">AdventOfCode2021–10</string>
+
+    <string name="result_title">Result:</string>
+    <string name="result_loading">…</string>
+
 </resources>

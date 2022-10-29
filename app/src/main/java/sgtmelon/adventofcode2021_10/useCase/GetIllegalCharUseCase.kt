@@ -5,7 +5,7 @@ import sgtmelon.adventofcode2021_10.model.Bracket
 
 class GetIllegalCharUseCase {
 
-    operator fun invoke(line: String): Bracket? {
+    operator fun invoke(line: String): Bracket.Close? {
         val openBracketList = mutableListOf<Bracket.Open>()
 
         for (char in line.toCharArray()) {

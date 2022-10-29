@@ -2,27 +2,27 @@ package sgtmelon.adventofcode2021_10.useCase
 
 import android.util.Log
 import sgtmelon.adventofcode2021_10.model.Bracket
+import sgtmelon.adventofcode2021_10.model.LineType
 
-class GetIllegalCharUseCase {
+class GetLineTypeUseCase {
 
-    operator fun invoke(line: String): Bracket.Close? {
+    operator fun invoke(line: String): LineType {
         val openBracketList = mutableListOf<Bracket.Open>()
 
         for (char in line.toCharArray()) {
-            when (val bracket = Bracket[char] ?: return null) {
+            when (val bracket = Bracket[char]) {
                 is Bracket.Open -> openBracketList.add(bracket)
                 is Bracket.Close -> {
-                    val lastOpen = openBracketList.lastOrNull() ?: return bracket
-
-                    if (lastOpen.closePair == bracket) {
+                    val lastOpen = openBracketList.lastOrNull()
+                    if (lastOpen != null && lastOpen.closePair == bracket) {
                         openBracketList.removeLast()
                     } else {
-                        return bracket
+                        return LineType.Corrupted(bracket)
                     }
                 }
             }
         }
 
-        return null
+        return LineType.Incomplete(openBracketList)
     }
 }

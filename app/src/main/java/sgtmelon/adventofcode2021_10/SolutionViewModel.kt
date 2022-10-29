@@ -5,12 +5,13 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import sgtmelon.adventofcode2021_10.useCase.GetIllegalCharUseCase
+import sgtmelon.adventofcode2021_10.model.LineType
+import sgtmelon.adventofcode2021_10.useCase.GetLineTypeUseCase
 import sgtmelon.adventofcode2021_10.useCase.SplitTextUseCase
 
 class SolutionViewModel(
     private val splitText: SplitTextUseCase,
-    private val getIllegalChar: GetIllegalCharUseCase
+    private val getLineType: GetLineTypeUseCase
 ) : ViewModel() {
 
     fun getResult(input: String): Flow<Int> = flow {
@@ -18,9 +19,9 @@ class SolutionViewModel(
 
         var totalPoints = 0
         for (line in lineList) {
-            val bracket = getIllegalChar(line)
-            if (bracket != null) {
-                totalPoints += bracket.point
+            when (val lineType = getLineType(line)) {
+                is LineType.Corrupted -> totalPoints += lineType.bracket.point
+                is LineType.Incomplete -> continue
             }
         }
 

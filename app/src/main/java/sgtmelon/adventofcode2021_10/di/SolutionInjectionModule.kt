@@ -3,7 +3,7 @@ package sgtmelon.adventofcode2021_10.di
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import sgtmelon.adventofcode2021_10.SolutionViewModel
-import sgtmelon.adventofcode2021_10.useCase.GetIllegalCharUseCase
+import sgtmelon.adventofcode2021_10.useCase.GetLineTypeUseCase
 import sgtmelon.adventofcode2021_10.useCase.SplitTextUseCase
 
 object SolutionInjectionModule {
@@ -19,7 +19,7 @@ object SolutionInjectionModule {
         }
 
         factory {
-            GetIllegalCharUseCase()
+            GetLineTypeUseCase()
         }
     }
 }

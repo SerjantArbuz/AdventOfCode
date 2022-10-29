@@ -17,7 +17,7 @@ sealed class Bracket(val char: Char) {
     }
 
     companion object {
-        operator fun get(char: Char): Bracket? = when (char) {
+        operator fun get(char: Char): Bracket = when (char) {
             Open.Round.char -> Open.Round
             Open.Square.char -> Open.Square
             Open.Curly.char -> Open.Curly
@@ -26,7 +26,7 @@ sealed class Bracket(val char: Char) {
             Close.Square.char -> Close.Square
             Close.Curly.char -> Close.Curly
             Close.Corner.char -> Close.Corner
-            else -> null
+            else -> throw IllegalArgumentException("Something wrong with input, illegal char")
         }
     }
 }

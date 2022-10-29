@@ -1,15 +1,15 @@
-package sgtmelon.adventofcode
+package sgtmelon.adventofcode.year21.day10
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import sgtmelon.adventofcode.model.LineType
-import sgtmelon.adventofcode.useCase.GetIncompletePointsUseCase
-import sgtmelon.adventofcode.useCase.GetLineTypeUseCase
-import sgtmelon.adventofcode.useCase.GetMiddleValueUseCase
-import sgtmelon.adventofcode.useCase.SplitTextUseCase
+import sgtmelon.adventofcode.year21.day10.model.LineType
+import sgtmelon.adventofcode.year21.day10.useCase.GetIncompletePointsUseCase
+import sgtmelon.adventofcode.year21.day10.useCase.GetLineTypeUseCase
+import sgtmelon.adventofcode.year21.day10.useCase.GetMiddleValueUseCase
+import sgtmelon.adventofcode.year21.day10.useCase.SplitTextUseCase
 
 class SolutionViewModelImpl(
     private val input: String,

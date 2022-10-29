@@ -1,6 +1,6 @@
-package sgtmelon.adventofcode.di
+package sgtmelon.adventofcode.year21.day10.di
 
-object PuzzleInput {
+object SubmarineInput {
 
     const val input =
         "<[{([[<{{(<{[({}<>){{}{}}][<<>{}>[<>{}]]}(<<<>()}{[]()}>([{}()][()()]))>[({({}[])(<>())}){[({}()){[][]}]{[\n" +

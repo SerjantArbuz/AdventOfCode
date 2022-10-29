@@ -1,7 +1,7 @@
-package sgtmelon.adventofcode.useCase
+package sgtmelon.adventofcode.year21.day10.useCase
 
-import sgtmelon.adventofcode.model.Bracket
-import sgtmelon.adventofcode.model.LineType
+import sgtmelon.adventofcode.year21.day10.model.Bracket
+import sgtmelon.adventofcode.year21.day10.model.LineType
 
 class GetLineTypeUseCase {
 

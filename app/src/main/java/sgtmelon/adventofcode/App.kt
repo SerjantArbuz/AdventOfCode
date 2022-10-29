@@ -1,8 +1,10 @@
 package sgtmelon.adventofcode
 
 import android.app.Application
+import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
-import sgtmelon.adventofcode.di.SolutionInjectionModule
+import sgtmelon.adventofcode.di.InjectionModules
+import sgtmelon.adventofcode.year21.day10.di.Year21Day10InjectionModule
 
 class App : Application() {
 
@@ -10,7 +12,8 @@ class App : Application() {
         super.onCreate()
 
         startKoin {
-            modules(SolutionInjectionModule.module)
+            androidContext(applicationContext)
+            modules(InjectionModules.modules)
         }
     }
 }

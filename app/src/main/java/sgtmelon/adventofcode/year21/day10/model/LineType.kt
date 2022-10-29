@@ -1,4 +1,4 @@
-package sgtmelon.adventofcode.model
+package sgtmelon.adventofcode.year21.day10.model
 
 sealed class LineType {
 

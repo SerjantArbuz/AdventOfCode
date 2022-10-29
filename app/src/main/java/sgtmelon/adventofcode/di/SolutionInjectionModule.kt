@@ -1,12 +1,12 @@
-package sgtmelon.adventofcode2021_10.di
+package sgtmelon.adventofcode.di
 
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
-import sgtmelon.adventofcode2021_10.SolutionViewModelImpl
-import sgtmelon.adventofcode2021_10.useCase.GetIncompletePointsUseCase
-import sgtmelon.adventofcode2021_10.useCase.GetLineTypeUseCase
-import sgtmelon.adventofcode2021_10.useCase.GetMiddleValueUseCase
-import sgtmelon.adventofcode2021_10.useCase.SplitTextUseCase
+import sgtmelon.adventofcode.SolutionViewModelImpl
+import sgtmelon.adventofcode.useCase.GetIncompletePointsUseCase
+import sgtmelon.adventofcode.useCase.GetLineTypeUseCase
+import sgtmelon.adventofcode.useCase.GetMiddleValueUseCase
+import sgtmelon.adventofcode.useCase.SplitTextUseCase
 
 object SolutionInjectionModule {
 

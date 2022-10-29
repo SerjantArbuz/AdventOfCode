@@ -1,4 +1,4 @@
-package sgtmelon.adventofcode2021_10.utils
+package sgtmelon.adventofcode.utils
 
 import android.app.Activity
 import androidx.annotation.LayoutRes

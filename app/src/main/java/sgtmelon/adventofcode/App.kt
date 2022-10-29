@@ -1,8 +1,8 @@
-package sgtmelon.adventofcode2021_10
+package sgtmelon.adventofcode
 
 import android.app.Application
 import org.koin.core.context.startKoin
-import sgtmelon.adventofcode2021_10.di.SolutionInjectionModule
+import sgtmelon.adventofcode.di.SolutionInjectionModule
 
 class App : Application() {
 

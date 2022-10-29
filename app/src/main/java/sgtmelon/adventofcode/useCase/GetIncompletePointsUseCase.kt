@@ -1,7 +1,6 @@
-package sgtmelon.adventofcode2021_10.useCase
+package sgtmelon.adventofcode.useCase
 
-import android.util.Log
-import sgtmelon.adventofcode2021_10.model.LineType
+import sgtmelon.adventofcode.model.LineType
 
 class GetIncompletePointsUseCase {
 

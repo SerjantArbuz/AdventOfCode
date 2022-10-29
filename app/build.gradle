@@ -7,7 +7,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "sgtmelon.adventofcode2021_10"
+        applicationId "sgtmelon.advent.of.code"
         minSdk 25
         targetSdk 32
         versionCode 1

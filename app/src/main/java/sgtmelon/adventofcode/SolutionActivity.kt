@@ -1,10 +1,10 @@
-package sgtmelon.adventofcode2021_10
+package sgtmelon.adventofcode
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import sgtmelon.adventofcode2021_10.utils.inflateBinding
+import sgtmelon.adventofcode.utils.inflateBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import sgtmelon.adventofcode2021_10.databinding.ActivitySolutionBinding
+import sgtmelon.adventofcode.databinding.ActivitySolutionBinding
 
 class SolutionActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package sgtmelon.adventofcode2021_10.useCase
+package sgtmelon.adventofcode.useCase
 
 class GetMiddleValueUseCase {
 

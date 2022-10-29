@@ -1,4 +1,4 @@
-package sgtmelon.adventofcode2021_10.di
+package sgtmelon.adventofcode.di
 
 object PuzzleInput {
 

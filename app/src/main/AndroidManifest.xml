@@ -25,9 +25,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".menu.SolutionMenuActivity"/>
+        <activity android:name=".menu.SolutionMenuActivity"
+            android:parentActivityName=".menu.MainMenuActivity"/>
 
-        <activity android:name=".year21.day10.SubmarineActivity"/>
+        <activity android:name=".year21.day10.SubmarineActivity"
+            android:parentActivityName=".menu.SolutionMenuActivity"/>
+
     </application>
 
 </manifest>

@@ -2,6 +2,7 @@ package sgtmelon.adventofcode.menu
 
 import android.content.Context
 import android.content.Intent
+import android.view.MenuItem
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 import sgtmelon.adventofcode.R
@@ -23,16 +24,17 @@ class SolutionMenuActivity : ParentMenuActivity(),
 
     override val adapter = DayAdapter(callback = this)
 
+    override fun setupView() {
+        super.setupView()
+
+        supportActionBar?.title = getString(R.string.year_title, yearId)
+    }
+
     override fun setupObservers() {
         super.setupObservers()
 
         viewModel.currentYear.observe(this) {
-            if (it != null) {
-                actionBar?.title = getString(R.string.year_title, it.id)
-                adapter.submitList(it.dayList)
-            } else {
-                finish()
-            }
+            if (it != null) adapter.submitList(it.dayList) else finish()
         }
     }
 

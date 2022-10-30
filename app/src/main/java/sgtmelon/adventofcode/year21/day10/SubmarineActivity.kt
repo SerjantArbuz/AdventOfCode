@@ -19,6 +19,13 @@ class SubmarineActivity : ParentActivity<ActivitySolutionBinding>() {
 
     private val viewModel: SubmarineViewModel by viewModel<SubmarineViewModelImpl>()
 
+    override fun setupView() {
+        super.setupView()
+
+        supportActionBar?.title = getString(R.string.year2021day10_title)
+        supportActionBar?.subtitle = getString(R.string.year2021day10_subtitle)
+    }
+
     override fun setupObservers() {
         super.setupObservers()
 

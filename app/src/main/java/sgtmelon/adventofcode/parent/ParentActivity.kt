@@ -1,6 +1,7 @@
 package sgtmelon.adventofcode.parent
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.ViewDataBinding
@@ -25,6 +26,14 @@ abstract class ParentActivity<T : ViewDataBinding> : AppCompatActivity() {
     open fun setupView() = Unit
 
     open fun setupObservers() = Unit
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> finish()
+        }
+
+        return true
+    }
 
     override fun onDestroy() {
         super.onDestroy()

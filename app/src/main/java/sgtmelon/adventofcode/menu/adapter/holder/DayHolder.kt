@@ -10,7 +10,7 @@ class DayHolder(
 ) : ParentHolder(binding){
 
     fun bind(day: Day, callback: Callback) = with(binding) {
-        button.text = root.context.getString(R.string.day_complete, day.id, day.solution.point)
+        button.text = context.getString(R.string.day_complete, day.id, day.solution.point)
         button.isEnabled = day.isAvailable
         button.setOnClickListener { callback.onDayClick(day) }
     }

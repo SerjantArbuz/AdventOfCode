@@ -5,7 +5,10 @@
     <string name="result_title">Result:</string>
     <string name="result_loading">…</string>
 
-    <string name="day_complete">%d: %d/2</string>
+    <string name="day_complete">%d: %d★</string>
     <string name="year_title">Year %d</string>
+
+    <string name="year2021day10_title">Submarine</string>
+    <string name="year2021day10_subtitle">The best route out of the deep-sea cave</string>
 
 </resources>

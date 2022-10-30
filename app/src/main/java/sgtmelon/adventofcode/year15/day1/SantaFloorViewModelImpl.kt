@@ -3,7 +3,7 @@ package sgtmelon.adventofcode.year15.day1
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import sgtmelon.adventofcode.utils.launchBack
+import sgtmelon.adventofcode.staff.utils.launchBack
 import sgtmelon.adventofcode.year15.day1.useCase.GetFloorAndBasementUseCase
 
 class SantaFloorViewModelImpl(

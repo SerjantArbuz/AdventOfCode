@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import sgtmelon.adventofcode.common.SplitTextUseCase
+import sgtmelon.adventofcode.staff.common.SplitTextUseCase
 import sgtmelon.adventofcode.year21.day10.model.LineType
 import sgtmelon.adventofcode.year21.day10.useCase.GetIncompletePointsUseCase
 import sgtmelon.adventofcode.year21.day10.useCase.GetLineTypeUseCase

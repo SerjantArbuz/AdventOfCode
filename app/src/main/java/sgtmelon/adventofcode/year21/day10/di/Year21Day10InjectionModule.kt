@@ -2,7 +2,6 @@ package sgtmelon.adventofcode.year21.day10.di
 
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
-import sgtmelon.adventofcode.common.SplitTextUseCase
 import sgtmelon.adventofcode.year21.day10.SubmarineViewModelImpl
 import sgtmelon.adventofcode.year21.day10.useCase.GetIncompletePointsUseCase
 import sgtmelon.adventofcode.year21.day10.useCase.GetLineTypeUseCase
@@ -16,7 +15,6 @@ object Year21Day10InjectionModule {
             SubmarineViewModelImpl(SubmarineInput().getInput(), get(), get(), get(), get())
         }
 
-        factory { SplitTextUseCase() }
         factory { GetLineTypeUseCase() }
         factory { GetIncompletePointsUseCase() }
         factory { GetMiddleValueUseCase() }

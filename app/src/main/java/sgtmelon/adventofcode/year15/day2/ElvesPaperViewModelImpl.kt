@@ -3,8 +3,8 @@ package sgtmelon.adventofcode.year15.day2
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import sgtmelon.adventofcode.common.SplitTextUseCase
-import sgtmelon.adventofcode.utils.launchBack
+import sgtmelon.adventofcode.staff.common.SplitTextUseCase
+import sgtmelon.adventofcode.staff.utils.launchBack
 import sgtmelon.adventofcode.year15.day2.useCase.GetSquareUseCase
 import sgtmelon.adventofcode.year15.day2.useCase.GetSurfaceAreaUseCase
 

@@ -5,4 +5,6 @@ import androidx.lifecycle.LiveData
 interface ElvesPaperViewModel {
 
     val paperNeeded: LiveData<Long>
+
+    val ribbonNeeded: LiveData<Long>
 }

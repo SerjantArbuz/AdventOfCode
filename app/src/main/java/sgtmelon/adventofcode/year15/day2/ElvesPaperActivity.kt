@@ -20,5 +20,6 @@ class ElvesPaperActivity : ParentTextSolutionActivity() {
         super.setupObservers()
 
         viewModel.paperNeeded.observe(this) { setFirstText(it.toString()) }
+        viewModel.ribbonNeeded.observe(this) { setSecondText(it.toString()) }
     }
 }

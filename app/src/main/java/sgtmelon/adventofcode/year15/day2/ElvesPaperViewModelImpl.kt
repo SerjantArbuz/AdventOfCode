@@ -17,18 +17,24 @@ class ElvesPaperViewModelImpl(
     ElvesPaperViewModel {
 
     init {
-        viewModelScope.launchBack { calculatePaper() }
+        viewModelScope.launchBack { calculatePaperAndRibbon() }
     }
 
     override val paperNeeded: MutableLiveData<Long> = MutableLiveData()
 
-    private fun calculatePaper() {
-        var totalSurface: Long = 0L
+    override val ribbonNeeded: MutableLiveData<Long> = MutableLiveData()
+
+    private fun calculatePaperAndRibbon() {
+        var totalPaper = 0L
+        var totalRibbon = 0L
 
         for (measure in splitText(input)) {
-            totalSurface += getSurfaceArea(getSquare(measure))
+            val (paper, ribbon) = getSurfaceArea(getSquare(measure))
+            totalPaper += paper
+            totalRibbon += ribbon
         }
 
-        paperNeeded.postValue(totalSurface)
+        paperNeeded.postValue(totalPaper)
+        ribbonNeeded.postValue(totalRibbon)
     }
 }

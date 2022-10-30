@@ -10,10 +10,9 @@ object Year15Day1InjectionModule {
     val module = module {
 
         viewModel {
-            SantaFloorViewModelImpl(get(), get())
+            SantaFloorViewModelImpl(FloorInput().getInput(), get())
         }
 
-        factory { FloorInput().getInput() }
         factory { GetFloorAndBasementUseCase() }
     }
 }

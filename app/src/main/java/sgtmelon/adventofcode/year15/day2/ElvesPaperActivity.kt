@@ -19,6 +19,6 @@ class ElvesPaperActivity : ParentTextSolutionActivity() {
     override fun setupObservers() {
         super.setupObservers()
 
-
+        viewModel.paperNeeded.observe(this) { setFirstText(it.toString()) }
     }
 }

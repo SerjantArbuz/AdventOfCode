@@ -5,4 +5,6 @@
     <string name="result_title">Result:</string>
     <string name="result_loading">…</string>
 
+    <string name="day_complete">%d: %d/2</string>
+
 </resources>

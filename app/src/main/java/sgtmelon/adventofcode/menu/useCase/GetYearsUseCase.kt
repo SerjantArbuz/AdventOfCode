@@ -2,12 +2,13 @@ package sgtmelon.adventofcode.menu.useCase
 
 import sgtmelon.adventofcode.menu.model.Day
 import sgtmelon.adventofcode.menu.model.Year
-import sgtmelon.adventofcode.menu.model.key.Solution
+import sgtmelon.adventofcode.menu.model.Solution
+import sgtmelon.adventofcode.year21.day10.SubmarineActivity
 
 class GetYearsUseCase {
 
-    private val solvedList: List<Triple<Int, Int, Solution>> = listOf(
-        Triple(first = 2021, second = 10, Solution.FULL)
+    private val solvedList: List<Pair<Int, Day>> = listOf(
+        2021 to Day(i = 10, Solution.FULL, SubmarineActivity::class.java)
     )
 
     private var yearList: List<Year>? = null
@@ -19,9 +20,9 @@ class GetYearsUseCase {
             val dayList = mutableListOf<Day>()
 
             for (day in (MIN_DAY..MAX_DAY)) {
-                val index = solvedList.indexOfFirst { it.first == year && it.second == day }
-                val solution = solvedList.getOrNull(index)?.third ?: Solution.NONE
-                dayList.add(Day(i = day, solution))
+                val index = solvedList.indexOfFirst { it.first == year && it.second.i == day }
+                val solvedDay = solvedList.getOrNull(index)?.second
+                dayList.add(solvedDay ?: Day(i = day))
             }
 
             list.add(Year(i = year, dayList))

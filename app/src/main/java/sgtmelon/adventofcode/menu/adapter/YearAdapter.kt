@@ -1,6 +1,5 @@
 package sgtmelon.adventofcode.menu.adapter
 
-import android.util.Log
 import android.view.ViewGroup
 import sgtmelon.adventofcode.R
 import sgtmelon.adventofcode.menu.adapter.diff.YearDiff
@@ -14,7 +13,7 @@ class YearAdapter(
 ) : ParentAdapter<Year, YearHolder>(YearDiff()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): YearHolder {
-        return YearHolder(parent.inflateBinding(R.layout.item_year))
+        return YearHolder(parent.inflateBinding(R.layout.item_button))
     }
 
     override fun onBindViewHolder(holder: YearHolder, position: Int) {

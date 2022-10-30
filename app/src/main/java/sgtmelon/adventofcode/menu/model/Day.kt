@@ -1,5 +1,10 @@
 package sgtmelon.adventofcode.menu.model
 
-import sgtmelon.adventofcode.menu.model.key.Solution
+data class Day(
+    val i: Int,
+    val solution: Solution = Solution.NONE,
+    val classLink: Class<*>? = null
+) {
 
-data class Day(val i: Int, val solution: Solution)
+    val isAvailable = solution != Solution.NONE
+}

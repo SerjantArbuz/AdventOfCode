@@ -9,6 +9,6 @@ class GetSquareUseCase {
 
         if (sizes.size != 3) throw IllegalStateException("Wrong square measure: $measure")
 
-        return Square(sizes[0], sizes[1], sizes[2])
+        return Square(sizes[0].toInt(), sizes[1].toInt(), sizes[2].toInt())
     }
 }

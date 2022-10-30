@@ -4,12 +4,14 @@ import sgtmelon.adventofcode.menu.model.Day
 import sgtmelon.adventofcode.menu.model.Solution
 import sgtmelon.adventofcode.menu.model.Year
 import sgtmelon.adventofcode.year15.day1.SantaFloorActivity
+import sgtmelon.adventofcode.year15.day2.ElvesPaperActivity
 import sgtmelon.adventofcode.year21.day10.SubmarineActivity
 
 class GetYearsUseCase {
 
     private val solvedList: List<Pair<Int, Day>> = listOf(
         2015 to Day(id = 1, Solution.FULL, SantaFloorActivity::class.java),
+        2015 to Day(id = 2, Solution.FULL, ElvesPaperActivity::class.java),
         2021 to Day(id = 10, Solution.FULL, SubmarineActivity::class.java)
     )
 

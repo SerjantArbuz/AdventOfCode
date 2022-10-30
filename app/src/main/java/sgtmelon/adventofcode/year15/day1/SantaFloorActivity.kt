@@ -23,7 +23,6 @@ class SantaFloorActivity : ParentActivity<ActivitySolutionBinding>() {
         supportActionBar?.subtitle = getString(R.string.year2015day1_subtitle)
     }
 
-
     override fun setupObservers() {
         super.setupObservers()
 

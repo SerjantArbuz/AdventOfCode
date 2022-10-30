@@ -28,6 +28,9 @@
         <activity android:name=".menu.SolutionMenuActivity"
             android:parentActivityName=".menu.MainMenuActivity"/>
 
+        <activity android:name=".year15.day1.SantaFloorActivity"
+            android:parentActivityName=".menu.SolutionMenuActivity"/>
+
         <activity android:name=".year21.day10.SubmarineActivity"
             android:parentActivityName=".menu.SolutionMenuActivity"/>
 

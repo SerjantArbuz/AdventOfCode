@@ -13,9 +13,10 @@ object Year21Day10InjectionModule {
     val module = module {
 
         viewModel {
-            SubmarineViewModelImpl(SubmarineInput.input, get(), get(), get(), get())
+            SubmarineViewModelImpl(get(), get(), get(), get(), get())
         }
 
+        factory { SubmarineInput().getInput() }
         factory { SplitTextUseCase() }
         factory { GetLineTypeUseCase() }
         factory { GetIncompletePointsUseCase() }

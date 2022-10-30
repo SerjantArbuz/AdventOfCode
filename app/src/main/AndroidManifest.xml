@@ -29,6 +29,7 @@
             android:parentActivityName=".menu.MainMenuActivity"/>
 
         <activity android:name=".year15.day1.SantaFloorActivity" />
+        <activity android:name=".year15.day2.ElvesPaperActivity" />
 
         <activity android:name=".year21.day10.SubmarineActivity" />
 

@@ -29,5 +29,8 @@ class SantaFloorActivity : ParentActivity<ActivitySolutionBinding>() {
         viewModel.floor.observe(this) {
             binding?.firstText?.text = it.toString()
         }
+        viewModel.basementPosition.observe(this) {
+            binding?.secondText?.text = it.toString()
+        }
     }
 }

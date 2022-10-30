@@ -5,4 +5,6 @@ import androidx.lifecycle.LiveData
 interface SantaFloorViewModel {
 
     val floor: LiveData<Int>
+
+    val basementPosition: LiveData<Int>
 }

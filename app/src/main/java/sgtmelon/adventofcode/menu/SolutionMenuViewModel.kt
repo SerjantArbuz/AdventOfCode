@@ -3,8 +3,8 @@ package sgtmelon.adventofcode.menu
 import androidx.lifecycle.LiveData
 import sgtmelon.adventofcode.menu.model.Year
 
-interface MainMenuViewModel {
+interface SolutionMenuViewModel {
 
-    val yearList: LiveData<List<Year>>
+    val currentYear: LiveData<Year?>
 
 }

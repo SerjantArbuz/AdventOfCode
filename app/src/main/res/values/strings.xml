@@ -6,5 +6,6 @@
     <string name="result_loading">…</string>
 
     <string name="day_complete">%d: %d/2</string>
+    <string name="year_title">Year %d</string>
 
 </resources>

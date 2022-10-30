@@ -9,7 +9,7 @@ class YearHolder(
 ) : ParentHolder(binding) {
 
     fun bind(year: Year, callback: Callback) = with(binding) {
-        button.text = year.i.toString()
+        button.text = year.id.toString()
         button.isEnabled = year.isAvailable
         button.setOnClickListener { callback.onYearClick(year) }
     }

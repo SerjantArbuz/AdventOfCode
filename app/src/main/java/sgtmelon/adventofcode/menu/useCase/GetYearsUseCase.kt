@@ -8,7 +8,7 @@ import sgtmelon.adventofcode.year21.day10.SubmarineActivity
 class GetYearsUseCase {
 
     private val solvedList: List<Pair<Int, Day>> = listOf(
-        2021 to Day(i = 10, Solution.FULL, SubmarineActivity::class.java)
+        2021 to Day(id = 10, Solution.FULL, SubmarineActivity::class.java)
     )
 
     private var yearList: List<Year>? = null
@@ -20,12 +20,12 @@ class GetYearsUseCase {
             val dayList = mutableListOf<Day>()
 
             for (day in (MIN_DAY..MAX_DAY)) {
-                val index = solvedList.indexOfFirst { it.first == year && it.second.i == day }
+                val index = solvedList.indexOfFirst { it.first == year && it.second.id == day }
                 val solvedDay = solvedList.getOrNull(index)?.second
-                dayList.add(solvedDay ?: Day(i = day))
+                dayList.add(solvedDay ?: Day(id = day))
             }
 
-            list.add(Year(i = year, dayList))
+            list.add(Year(id = year, dayList))
         }
 
         yearList = list
@@ -33,7 +33,7 @@ class GetYearsUseCase {
         return list
     }
 
-    operator fun invoke(year: Int): Year? = invoke().firstOrNull { it.i == year }
+    operator fun invoke(yearId: Int): Year? = invoke().firstOrNull { it.id == yearId }
 
     companion object {
         const val MIN_YEAR = 2015

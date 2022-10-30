@@ -25,6 +25,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".menu.SolutionMenuActivity"/>
+
         <activity android:name=".year21.day10.SubmarineActivity"/>
     </application>
 

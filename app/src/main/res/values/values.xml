@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <integer name="menu_column_count">2</integer>
+    <integer name="main_column_count">2</integer>
+    <integer name="solution_column_count">3</integer>
 
 </resources>

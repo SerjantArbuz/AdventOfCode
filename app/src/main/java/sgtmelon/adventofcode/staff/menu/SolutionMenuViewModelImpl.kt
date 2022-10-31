@@ -13,12 +13,11 @@ class SolutionMenuViewModelImpl(
 ) : ViewModel(),
     SolutionMenuViewModel {
 
+    override val currentYear: MutableLiveData<Year?> = MutableLiveData()
+
     init {
         viewModelScope.launchBack {
             currentYear.postValue(if (yearId != null) getYears(yearId) else null)
         }
     }
-
-    override val currentYear: MutableLiveData<Year?> = MutableLiveData()
-
 }

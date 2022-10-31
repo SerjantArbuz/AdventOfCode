@@ -5,13 +5,11 @@ import sgtmelon.adventofcode.year15.day3.model.Direction
 class GetUniqueHousesUseCase {
 
     operator fun invoke(input: String): HashMap<String, Int> {
-        var x = 0
-        var y = 0
+        var x = 0; var y = 0
 
         fun getKey(): String = "$x/$y"
 
-        val coordinatesMap = hashMapOf<String, Int>()
-        coordinatesMap[getKey()] = 1
+        val coordinatesMap = hashMapOf(getKey() to 1)
 
         for (char in input.toCharArray()) {
             when (Direction[char]) {

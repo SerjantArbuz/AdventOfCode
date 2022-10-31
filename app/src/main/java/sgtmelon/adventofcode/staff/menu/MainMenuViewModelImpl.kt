@@ -12,10 +12,9 @@ class MainMenuViewModelImpl(
 ) : ViewModel(),
     MainMenuViewModel {
 
+    override val yearList: MutableLiveData<List<Year>> = MutableLiveData()
+
     init {
         viewModelScope.launchBack { yearList.postValue(getYears()) }
     }
-
-    override val yearList: MutableLiveData<List<Year>> = MutableLiveData()
-
 }

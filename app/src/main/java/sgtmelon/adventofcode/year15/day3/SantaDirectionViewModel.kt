@@ -5,4 +5,6 @@ import androidx.lifecycle.LiveData
 interface SantaDirectionViewModel {
 
     val uniqueHouses: LiveData<Int>
+
+    val workWithRobot: LiveData<Int>
 }

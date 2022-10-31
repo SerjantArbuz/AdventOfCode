@@ -20,5 +20,6 @@ class SantaDirectionActivity : ParentTextSolutionActivity() {
         super.setupObservers()
 
         viewModel.uniqueHouses.observe(this) { setFirstText(it.toString()) }
+        viewModel.workWithRobot.observe(this) { setSecondText(it.toString()) }
     }
 }

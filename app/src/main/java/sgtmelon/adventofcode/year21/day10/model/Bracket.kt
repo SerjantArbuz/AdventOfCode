@@ -1,5 +1,7 @@
 package sgtmelon.adventofcode.year21.day10.model
 
+import sgtmelon.adventofcode.staff.model.exception.WrongInputCharException
+
 sealed class Bracket(val char: Char) {
 
     sealed class Open(char: Char, val closePair: Close) : Bracket(char) {
@@ -31,7 +33,7 @@ sealed class Bracket(val char: Char) {
             Close.Square.char -> Close.Square
             Close.Curly.char -> Close.Curly
             Close.Corner.char -> Close.Corner
-            else -> throw IllegalArgumentException("Something wrong with input, illegal char")
+            else -> throw WrongInputCharException()
         }
     }
 }

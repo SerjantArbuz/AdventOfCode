@@ -19,6 +19,6 @@ class SantaDirectionActivity : ParentTextSolutionActivity() {
     override fun setupObservers() {
         super.setupObservers()
 
-
+        viewModel.uniqueHouses.observe(this) { setFirstText(it.toString()) }
     }
 }

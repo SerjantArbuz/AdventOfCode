@@ -12,7 +12,7 @@ object Year21Day10InjectionModule {
     val module = module {
 
         viewModel {
-            SubmarineViewModelImpl(SubmarineInput().getInput(), get(), get(), get(), get())
+            SubmarineViewModelImpl(SubmarineInput().get(), get(), get(), get(), get())
         }
 
         factory { GetLineTypeUseCase() }

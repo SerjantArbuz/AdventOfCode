@@ -1,11 +1,10 @@
 package sgtmelon.adventofcode.year21.day10
 
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import sgtmelon.adventofcode.staff.common.SplitTextUseCase
+import sgtmelon.adventofcode.staff.parent.textSolution.TextSolutionViewModelImpl
+import sgtmelon.adventofcode.staff.utils.launchBack
 import sgtmelon.adventofcode.year21.day10.model.LineType
 import sgtmelon.adventofcode.year21.day10.useCase.GetIncompletePointsUseCase
 import sgtmelon.adventofcode.year21.day10.useCase.GetLineTypeUseCase
@@ -17,15 +16,14 @@ class SubmarineViewModelImpl(
     private val getLineType: GetLineTypeUseCase,
     private val getIncompletePoints: GetIncompletePointsUseCase,
     private val getMiddleValue: GetMiddleValueUseCase
-) : ViewModel(),
-    SubmarineViewModel {
+) : TextSolutionViewModelImpl() {
 
-    override val corruptedPoints: MutableLiveData<Int> = MutableLiveData()
+    override val firstValue: MutableLiveData<String> = MutableLiveData()
 
-    override val incompletePoints: MutableLiveData<Long> = MutableLiveData()
+    override val secondValue: MutableLiveData<String> = MutableLiveData()
 
     init {
-        viewModelScope.launch(Dispatchers.IO) { calculatePoints() }
+        viewModelScope.launchBack { calculatePoints() }
     }
 
     private fun calculatePoints() {
@@ -41,7 +39,7 @@ class SubmarineViewModelImpl(
             }
         }
 
-        this.corruptedPoints.postValue(corruptedPoints)
-        this.incompletePoints.postValue(getMiddleValue(incompleteList))
+        firstValue.postValue(corruptedPoints.toString())
+        secondValue.postValue(getMiddleValue(incompleteList).toString())
     }
 }

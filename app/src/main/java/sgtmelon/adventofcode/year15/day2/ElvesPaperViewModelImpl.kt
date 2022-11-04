@@ -1,9 +1,9 @@
 package sgtmelon.adventofcode.year15.day2
 
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import sgtmelon.adventofcode.staff.common.SplitTextUseCase
+import sgtmelon.adventofcode.staff.parent.textSolution.TextSolutionViewModelImpl
 import sgtmelon.adventofcode.staff.utils.launchBack
 import sgtmelon.adventofcode.year15.day2.useCase.GetSquareUseCase
 import sgtmelon.adventofcode.year15.day2.useCase.GetSurfaceAreaUseCase
@@ -13,12 +13,11 @@ class ElvesPaperViewModelImpl(
     private val splitText: SplitTextUseCase,
     private val getSquare: GetSquareUseCase,
     private val getSurfaceArea: GetSurfaceAreaUseCase
-) : ViewModel(),
-    ElvesPaperViewModel {
+) : TextSolutionViewModelImpl() {
 
-    override val paperNeeded: MutableLiveData<Long> = MutableLiveData()
+    override val firstValue: MutableLiveData<String> = MutableLiveData()
 
-    override val ribbonNeeded: MutableLiveData<Long> = MutableLiveData()
+    override val secondValue: MutableLiveData<String> = MutableLiveData()
 
     init {
         viewModelScope.launchBack { calculatePaperAndRibbon() }
@@ -34,7 +33,7 @@ class ElvesPaperViewModelImpl(
             totalRibbon += ribbon
         }
 
-        paperNeeded.postValue(totalPaper)
-        ribbonNeeded.postValue(totalRibbon)
+        firstValue.postValue(totalPaper.toString())
+        secondValue.postValue(totalRibbon.toString())
     }
 }

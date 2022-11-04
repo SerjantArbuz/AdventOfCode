@@ -2,7 +2,7 @@ package sgtmelon.adventofcode.year15.day3
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import sgtmelon.adventofcode.staff.parent.textSolution.TextSolutionViewModelImpl
 import sgtmelon.adventofcode.year15.day3.useCase.GetUniqueHousesUseCase
 import sgtmelon.adventofcode.year15.day3.useCase.GetWithRobotHousesUseCase
 
@@ -10,10 +10,12 @@ class SantaDirectionViewModel(
     input: String,
     getUniqueHouses: GetUniqueHousesUseCase,
     getWithRobotHouses: GetWithRobotHousesUseCase
-) : ViewModel() {
+) : TextSolutionViewModelImpl() {
 
-    val uniqueHouses: LiveData<Int> = MutableLiveData(getUniqueHouses(input).size)
+    override val firstValue: LiveData<String> =
+        MutableLiveData(getUniqueHouses(input).size.toString())
 
-    val workWithRobot: LiveData<Int> = MutableLiveData(getWithRobotHouses(input).size)
+    override val secondValue: LiveData<String> =
+        MutableLiveData(getWithRobotHouses(input).size.toString())
 
 }

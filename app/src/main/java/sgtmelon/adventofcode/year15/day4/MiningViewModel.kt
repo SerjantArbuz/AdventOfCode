@@ -1,12 +1,11 @@
 package sgtmelon.adventofcode.year15.day4
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import sgtmelon.adventofcode.staff.parent.textSolution.TextSolutionViewModelImpl
 
-class MiningViewModel : ViewModel() {
+class MiningViewModel : TextSolutionViewModelImpl() {
 
-    val firstValue: LiveData<String> = MutableLiveData()
+    override val firstValue: MutableLiveData<String> = MutableLiveData()
 
-    val secondValue: LiveData<String> = MutableLiveData()
+    override val secondValue: MutableLiveData<String> = MutableLiveData()
 }

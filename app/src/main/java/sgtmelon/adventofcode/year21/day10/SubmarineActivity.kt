@@ -15,6 +15,6 @@ class SubmarineActivity : TextSolutionActivity() {
 
     override val subtitleId: Int = R.string.year2021day10_subtitle
 
-    override val viewModel by viewModel<SubmarineViewModelImpl>()
+    override val viewModel by viewModel<SubmarineViewModel>()
 
 }

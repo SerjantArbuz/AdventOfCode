@@ -15,6 +15,6 @@ class SantaFloorActivity : TextSolutionActivity() {
 
     override val subtitleId: Int = R.string.year2015day1_subtitle
 
-    override val viewModel by viewModel<SantaFloorViewModelImpl>()
+    override val viewModel by viewModel<SantaFloorViewModel>()
 
 }

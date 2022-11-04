@@ -15,6 +15,6 @@ class ElvesPaperActivity : TextSolutionActivity() {
 
     override val subtitleId: Int = R.string.year2015day2_subtitle
 
-    override val viewModel by viewModel<ElvesPaperViewModelImpl>()
+    override val viewModel by viewModel<ElvesPaperViewModel>()
 
 }

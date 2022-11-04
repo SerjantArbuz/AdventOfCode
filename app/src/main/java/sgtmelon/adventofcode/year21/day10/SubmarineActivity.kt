@@ -5,7 +5,7 @@ import sgtmelon.adventofcode.R
 import sgtmelon.adventofcode.staff.parent.textSolution.TextSolutionActivity
 
 /**
- * 2021 Day 10. Takes around ~2 hours for both puzzle parts.
+ * 2021 Day 10. Final time: ~2 hours.
  *
  * https://adventofcode.com/2021/day/10
  */

@@ -1,6 +1,11 @@
 package sgtmelon.adventofcode.year15.day4
 
-import sgtmelon.adventofcode.staff.parent.textSolution.TextSolutionViewModelImpl
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
+import kotlinx.coroutines.flow.Flow
+import sgtmelon.adventofcode.staff.parent.textSolution.TextSolutionViewModel
+import sgtmelon.adventofcode.staff.utils.flowOnBack
 import sgtmelon.adventofcode.year15.day4.useCase.GetHexUseCase
 import sgtmelon.adventofcode.year15.day4.useCase.GetMD5UseCase
 
@@ -8,17 +13,25 @@ class MiningViewModel(
     private val input: String,
     private val getMD5: GetMD5UseCase,
     private val getHex: GetHexUseCase
-) : TextSolutionViewModelImpl() {
+) : ViewModel(),
+    TextSolutionViewModel {
 
-    override suspend fun calculatePuzzle() {
+    override val firstValue: LiveData<String> = getHash(prefix = "00000").asLiveData()
 
+    override val secondValue: LiveData<String> = getHash(prefix = "000000").asLiveData()
+
+    private fun getHash(prefix: String): Flow<String> = flowOnBack {
         var hash = ""
-        var i = 0
+        var i = 0L
+
         do {
             hash = getHex(getMD5(input.plus(++i)))
-        } while (!hash.startsWith(prefix = "000000"))
+            emit(formatHash(hash, i))
+        } while (!hash.startsWith(prefix))
 
-        firstValue.postValue(i.toString())
-        secondValue.postValue(hash)
+        emit(formatHash(hash, i))
     }
+
+    private fun formatHash(hash: String, iteration: Long): String = "$iteration\n$hash"
+
 }

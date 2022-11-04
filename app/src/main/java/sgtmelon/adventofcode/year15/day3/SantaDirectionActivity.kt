@@ -5,7 +5,7 @@ import sgtmelon.adventofcode.R
 import sgtmelon.adventofcode.staff.parent.textSolution.TextSolutionActivity
 
 /**
- * 2015 Day 3. Final time: 45.
+ * 2015 Day 3. Final time: 45 minutes.
  *
  * https://adventofcode.com/2015/day/3
  */

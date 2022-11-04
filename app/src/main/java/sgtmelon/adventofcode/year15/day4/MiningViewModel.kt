@@ -16,7 +16,7 @@ class MiningViewModel(
         var i = 0
         do {
             hash = getHex(getMD5(input.plus(++i)))
-        } while (!hash.startsWith(prefix = "00000"))
+        } while (!hash.startsWith(prefix = "000000"))
 
         firstValue.postValue(i.toString())
         secondValue.postValue(hash)

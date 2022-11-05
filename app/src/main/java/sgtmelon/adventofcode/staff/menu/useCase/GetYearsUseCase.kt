@@ -7,6 +7,7 @@ import sgtmelon.adventofcode.year15.day1.SantaFloorActivity
 import sgtmelon.adventofcode.year15.day2.ElvesPaperActivity
 import sgtmelon.adventofcode.year15.day3.SantaDirectionActivity
 import sgtmelon.adventofcode.year15.day4.MiningActivity
+import sgtmelon.adventofcode.year15.day5.NiceStringActivity
 import sgtmelon.adventofcode.year21.day10.SubmarineActivity
 
 class GetYearsUseCase {
@@ -16,6 +17,7 @@ class GetYearsUseCase {
         2015 to Day(id = 2, Solution.FULL, ElvesPaperActivity::class.java),
         2015 to Day(id = 3, Solution.FULL, SantaDirectionActivity::class.java),
         2015 to Day(id = 4, Solution.FULL, MiningActivity::class.java),
+        2015 to Day(id = 5, Solution.FULL, NiceStringActivity::class.java),
         2021 to Day(id = 10, Solution.FULL, SubmarineActivity::class.java)
     )
 

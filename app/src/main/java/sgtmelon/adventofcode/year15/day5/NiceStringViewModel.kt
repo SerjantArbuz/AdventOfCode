@@ -1,6 +1,5 @@
 package sgtmelon.adventofcode.year15.day5
 
-import android.util.Log
 import sgtmelon.adventofcode.staff.common.SplitTextUseCase
 import sgtmelon.adventofcode.staff.parent.textSolution.TextSolutionViewModelImpl
 import sgtmelon.adventofcode.year15.day5.useCase.IsNiceString1UseCase
@@ -17,17 +16,9 @@ class NiceStringViewModel(
         var nice1Count = 0
         var nice2Count = 0
 
-        Log.i("HERE", "isNice: ${isNiceString2("rxexcbwhiywwwwnu")}")
-
-        for ((i, string) in splitText(input).withIndex()) {
-            if (isNiceString1(string)) {
-                nice1Count++
-            }
-
-            Log.i("HERE", "$i | line: $string")
-            if (isNiceString2(string)) {
-                nice2Count++
-            }
+        for (string in splitText(input)) {
+            if (isNiceString1(string)) nice1Count++
+            if (isNiceString2(string)) nice2Count++
         }
 
         firstValue.postValue(nice1Count.toString())

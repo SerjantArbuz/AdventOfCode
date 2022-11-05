@@ -7,7 +7,6 @@ import sgtmelon.adventofcode.R
 import sgtmelon.adventofcode.staff.menu.adapter.YearAdapter
 import sgtmelon.adventofcode.staff.menu.model.Year
 import sgtmelon.adventofcode.staff.parent.ParentMenuActivity
-import sgtmelon.adventofcode.year15.day5.NiceStringActivity
 
 class MainMenuActivity : ParentMenuActivity(),
     YearAdapter.Callback {
@@ -19,7 +18,7 @@ class MainMenuActivity : ParentMenuActivity(),
     override val adapter = YearAdapter(callback = this)
 
     /** Change this variable for open specific screen (class) directly (skipping the menu). */
-    private val fastAccessClass: Class<*>? = NiceStringActivity::class.java
+    private val fastAccessClass: Class<*>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

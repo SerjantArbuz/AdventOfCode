@@ -1,57 +1,34 @@
 package sgtmelon.adventofcode.year15.day5.useCase
 
-import android.util.Log
-
 class IsNiceString2UseCase {
 
     operator fun invoke(string: String): Boolean {
+        /** Pair: first - position, second - count */
+        val repeatMap = hashMapOf<String, Pair<Int, Int>>()
         var isRepeats = false
-        val repeatMap = hashMapOf<String, Int>()
 
-        var isSkipped = false
         for ((i, char) in string.toCharArray().withIndex()) {
             if (!isRepeats) {
-                val nextChar = string.getOrNull(index = i + 2)
-                if (nextChar != null && char == nextChar) {
-                    Log.i("HERE", "isRepeats: $char${string[i + 1]}$nextChar")
-                    isRepeats = true
-                }
+                isRepeats = char == string.getOrNull(index = i + 2)
             }
 
             val nextChar = string.getOrNull(index = i + 1) ?: break
-            val previousChar = string.getOrNull(index = i - 1)
-            val previousPair = "$previousChar$char"
-            val pair = "$char$nextChar"
+            val charPair = "$char$nextChar"
+            val repeatPair = repeatMap[charPair]
 
-            /** Skip overlaps */
-            if (previousChar != null && previousPair == pair) {
-                if (isSkipped) {
-                    isSkipped = false
-                } else {
-                    isSkipped = true
-                    Log.i("HERE", "overlap: previous=$previousPair, next=$pair")
-                    continue
-                }
-            }
+            /**
+             * Skipping overlaps and continue working with cases like this one: 'rxexcbwhiywwwwnu'
+             *
+             * Check by position explanation:
+             * - If difference between positions == 1 -> overlap ("www")
+             * - Else -> it's pair ("ww" and "ww")
+             */
+            if (repeatPair != null && i - repeatPair.first == 1) continue
 
-            val count = repeatMap[pair] ?: 0
-            repeatMap[pair] = count + 1
+            val newCount = (repeatPair?.second ?: 0) + 1
+            repeatMap[charPair] = i to newCount
         }
 
-        for ((i, value) in repeatMap.values.withIndex()) {
-            if (value >= 2) {
-                Log.i("HERE", "havePair: ${repeatMap.keys.toList()[i]}")
-                break
-            }
-        }
-
-        val isNice = isRepeats && repeatMap.values.any { it >= 2 }
-        if (isNice) {
-            Log.i("HERE", "isNice!")
-        } else {
-            Log.i("HERE", "naughty :(")
-        }
-
-        return isNice
+        return isRepeats && repeatMap.values.any { it.second >= 2 }
     }
 }

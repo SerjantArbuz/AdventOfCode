@@ -1,6 +1,6 @@
 package sgtmelon.adventofcode.year15.day5.useCase
 
-class IsNiceStringUseCase {
+class IsNiceString1UseCase {
 
     private val vowelsList = listOf('a', 'e', 'i', 'o', 'u')
     private val banText = listOf("ab", "cd", "pq", "xy")
@@ -10,13 +10,13 @@ class IsNiceStringUseCase {
         var haveTwice = false
 
         for ((i, char) in string.toCharArray().withIndex()) {
-            if (i != string.lastIndex) {
-                val nextIndex = i + 1
-                if (banText.contains("$char${string[nextIndex]}")) {
+            val nextChar = string.getOrNull(i + 1)
+            if (nextChar != null) {
+                if (banText.contains("$char$nextChar")) {
                     return false
                 }
 
-                if (!haveTwice && char == string[nextIndex]) {
+                if (!haveTwice && char == nextChar) {
                     haveTwice = true
                 }
             }

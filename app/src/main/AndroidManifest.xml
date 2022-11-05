@@ -32,6 +32,7 @@
         <activity android:name=".year15.day2.ElvesPaperActivity" />
         <activity android:name=".year15.day3.SantaDirectionActivity" />
         <activity android:name=".year15.day4.MiningActivity" />
+        <activity android:name=".year15.day5.NiceStringActivity" />
 
         <activity android:name=".year21.day10.SubmarineActivity" />
 

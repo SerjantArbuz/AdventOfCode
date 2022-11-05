@@ -18,7 +18,7 @@ sealed class Direction(val char: Char) {
             South.char -> South
             East.char -> East
             West.char -> West
-            else -> throw WrongInputCharException()
+            else -> throw WrongInputCharException(char)
         }
     }
 }

@@ -12,7 +12,7 @@ class MiningViewModelImpl(
     private val getMD5: GetMD5UseCase,
     private val getHex: GetHexUseCase
 ) : ViewModel(),
-    MiningViewModelInterface {
+    MiningViewModel {
 
     override val firstValue: Flow<HashState> get() = getHash(FIRST_PREFIX)
 

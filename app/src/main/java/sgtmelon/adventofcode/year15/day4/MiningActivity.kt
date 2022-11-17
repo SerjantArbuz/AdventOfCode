@@ -17,7 +17,7 @@ class MiningActivity : SolutionActivity() {
 
     override val subtitleId: Int = R.string.year2015day4_subtitle
 
-    val viewModel: MiningViewModelInterface by viewModel<MiningViewModelImpl>()
+    val viewModel: MiningViewModel by viewModel<MiningViewModelImpl>()
 
     override fun setupObservers() {
         super.setupObservers()

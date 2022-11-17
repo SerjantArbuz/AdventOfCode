@@ -5,10 +5,10 @@ import sgtmelon.adventofcode.year15.day2.model.Square
 class GetSurfaceAreaUseCase {
 
     /**
-     * First - surface, second - ribbon.
+     * Return: first - surface, second - ribbon.
      *
      * surface = 2*l*w + 2*w*h + 2*h*l + area of the smallest side.
-     * ribbon = perimeter of smallest side + l*w*h
+     * ribbon = l*w*h + perimeter of smallest side
      */
     operator fun invoke(shape: Square): Pair<Long, Long> = with(shape) {
         val (side1, side2) = smallestSide

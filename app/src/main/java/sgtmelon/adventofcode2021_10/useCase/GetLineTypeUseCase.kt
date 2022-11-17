@@ -1,6 +1,5 @@
 package sgtmelon.adventofcode2021_10.useCase
 
-import android.util.Log
 import sgtmelon.adventofcode2021_10.model.Bracket
 import sgtmelon.adventofcode2021_10.model.LineType
 

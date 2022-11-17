@@ -1,10 +1,8 @@
 package sgtmelon.adventofcode2021_10
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import kotlin.math.ceil
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import sgtmelon.adventofcode2021_10.model.LineType

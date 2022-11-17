@@ -9,8 +9,11 @@ class GetMiddleValueUseCase {
      * It means what [list] lastIndex will be always even number (lastIndex = size - 1) and
      * lastIndex will be divide without remainder by 2.
      *
-     * For get middle index need use formula: lastIndex / 2 - 1.
-     * Need minus 1 from divided number because indices starts from 0 and we have odd list.
+     * For get middle index need use formula: lastIndex / 2.
+     * Don't forget indices starts from zero.
+     *
+     * Example:
+     * size=51, lastIndex=50, middleIndex=50/2=25 (24 indices before and after this value).
      */
-    operator fun invoke(list: List<Long>): Long = list.sorted()[list.indices.last / 2 - 1]
+    operator fun invoke(list: List<Long>): Long = list.sorted()[list.lastIndex / 2]
 }

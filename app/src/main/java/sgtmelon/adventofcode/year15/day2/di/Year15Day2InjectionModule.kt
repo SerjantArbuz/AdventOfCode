@@ -1,6 +1,7 @@
 package sgtmelon.adventofcode.year15.day2.di
 
 import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import sgtmelon.adventofcode.year15.day2.ElvesPaperViewModel
 import sgtmelon.adventofcode.year15.day2.useCase.GetSquareUseCase
@@ -11,10 +12,14 @@ object Year15Day2InjectionModule {
     val module = module {
 
         viewModel {
-            ElvesPaperViewModel(ElvesPaperInput().get(), get(), get(), get())
+            ElvesPaperViewModel(get(named(INPUT)), get(), get(), get())
         }
 
+        factory(named(INPUT)) { Year15Day2Input().get() }
         factory { GetSquareUseCase() }
         factory { GetSurfaceAreaUseCase() }
     }
+
+    private const val INPUT = "YEAR_15_DAY_2_INPUT"
+
 }

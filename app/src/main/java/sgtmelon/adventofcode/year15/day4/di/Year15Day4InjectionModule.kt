@@ -15,10 +15,10 @@ object Year15Day4InjectionModule {
             MiningViewModelImpl(get(named(INPUT)), get(), get())
         }
 
-        single(named(INPUT)) { MiningInput().get() }
+        single(named(INPUT)) { Year15Day4Input().get() }
         factory { GetMD5UseCase() }
         factory { GetHexUseCase() }
     }
 
-    private const val INPUT = "MINING_INPUT"
+    private const val INPUT = "YEAR_15_DAY_4_INPUT"
 }

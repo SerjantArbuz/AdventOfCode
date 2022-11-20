@@ -1,6 +1,6 @@
 package sgtmelon.adventofcode.year15.day4.di
 
-class MiningInput {
+class Year15Day4Input {
 
     fun get(): String {
         return "ckczppom"

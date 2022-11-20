@@ -15,11 +15,11 @@ object Year15Day5InjectionModule {
             NiceStringViewModel(get(named(INPUT)), get(), get(), get())
         }
 
-        factory(named(INPUT)) { NiceStringInput().get() }
+        factory(named(INPUT)) { Year15Day5Input().get() }
         factory { IsNiceString1UseCase() }
         factory { IsNiceString2UseCase() }
     }
 
-    private const val INPUT = "NICE_STRING_INPUT"
+    private const val INPUT = "YEAR_15_DAY_5_INPUT"
 
 }

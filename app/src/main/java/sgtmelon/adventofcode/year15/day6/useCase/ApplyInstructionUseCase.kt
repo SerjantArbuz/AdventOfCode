@@ -1,11 +1,16 @@
 package sgtmelon.adventofcode.year15.day6.useCase
 
+import kotlin.math.max
 import sgtmelon.adventofcode.year15.day6.model.Command
 import sgtmelon.adventofcode.year15.day6.model.Instruction
 
 class ApplyInstructionUseCase {
 
-    operator fun invoke(instruction: Instruction, lightMap: MutableMap<String, Boolean>) {
+    operator fun invoke(
+        instruction: Instruction,
+        lightMap: MutableMap<String, Boolean>,
+        brightMap: MutableMap<String, Int>
+    ) {
         val (x1, y1) = instruction.start
         val (x2, y2) = instruction.end
 
@@ -18,6 +23,8 @@ class ApplyInstructionUseCase {
                     Command.OFF -> false
                     Command.TOGGLE -> !(lightMap[key] ?: false)
                 }
+
+                brightMap[key] = max(a = (brightMap[key] ?: 0) + instruction.command.bright, b = 0)
             }
         }
     }

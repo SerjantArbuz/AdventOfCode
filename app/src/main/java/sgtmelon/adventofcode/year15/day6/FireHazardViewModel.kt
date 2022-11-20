@@ -14,12 +14,14 @@ class FireHazardViewModel(
 
     override suspend fun calculatePuzzle() {
         val lightMap = mutableMapOf<String, Boolean>()
+        val brightMap = mutableMapOf<String, Int>()
 
         for (line in splitText(input)) {
             val instruction = getInstruction(line)
-            applyInstruction(instruction, lightMap)
+            applyInstruction(instruction, lightMap, brightMap)
         }
 
-        firstValue.postValue("lightOn: ${lightMap.count { it.value }}")
+        firstValue.postValue(lightMap.count { it.value }.toString())
+        secondValue.postValue(brightMap.values.sum().toString())
     }
 }

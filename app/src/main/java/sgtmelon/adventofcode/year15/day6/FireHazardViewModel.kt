@@ -1,7 +1,7 @@
 package sgtmelon.adventofcode.year15.day6
 
 import sgtmelon.adventofcode.staff.common.SplitTextUseCase
-import sgtmelon.adventofcode.staff.parent.textSolution.TextSolutionViewModelImpl
+import sgtmelon.adventofcode.staff.parent.solution.TextSolutionViewModelImpl
 import sgtmelon.adventofcode.year15.day6.useCase.ApplyInstructionUseCase
 import sgtmelon.adventofcode.year15.day6.useCase.GetInstructionUseCase
 

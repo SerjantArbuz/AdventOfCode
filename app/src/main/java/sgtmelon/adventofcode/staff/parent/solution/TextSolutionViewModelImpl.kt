@@ -1,4 +1,4 @@
-package sgtmelon.adventofcode.staff.parent.textSolution
+package sgtmelon.adventofcode.staff.parent.solution
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

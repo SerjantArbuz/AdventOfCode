@@ -10,4 +10,7 @@
     <string name="year2015day3_title">Santa</string>
     <string name="year2015day3_subtitle">Delivery in two-dimensional grid</string>
 
+    <string name="year2015day4_title">Santa mining</string>
+    <string name="year2015day4_subtitle">Needs help mining some AdventCoins</string>
+
 </resources>

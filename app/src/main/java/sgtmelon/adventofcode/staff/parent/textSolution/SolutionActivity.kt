@@ -1,13 +1,14 @@
-package sgtmelon.adventofcode.staff.parent
+package sgtmelon.adventofcode.staff.parent.textSolution
 
 import androidx.annotation.StringRes
 import sgtmelon.adventofcode.R
 import sgtmelon.adventofcode.databinding.ActivitySolutionBinding
+import sgtmelon.adventofcode.staff.parent.ParentActivity
 
 /**
  * Parent class for solutions with 2 text fields.
  */
-abstract class ParentTextSolutionActivity : ParentActivity<ActivitySolutionBinding>() {
+abstract class SolutionActivity : ParentActivity<ActivitySolutionBinding>() {
 
     override val layoutId: Int = R.layout.activity_solution
 
@@ -22,8 +23,7 @@ abstract class ParentTextSolutionActivity : ParentActivity<ActivitySolutionBindi
         supportActionBar?.subtitle = getString(subtitleId)
     }
 
-    fun setFirstText(it: String) = run { binding?.firstText?.text = it }
+    protected fun setFirstText(it: String) = run { binding?.firstText?.text = it }
 
-    fun setSecondText(it: String) = run { binding?.secondText?.text = it }
-
+    protected fun setSecondText(it: String) = run { binding?.secondText?.text = it }
 }

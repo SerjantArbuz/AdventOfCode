@@ -1,10 +1,17 @@
 package sgtmelon.adventofcode.year15.day1
 
-import androidx.lifecycle.LiveData
+import sgtmelon.adventofcode.staff.parent.textSolution.TextSolutionViewModelImpl
+import sgtmelon.adventofcode.year15.day1.useCase.GetFloorAndBasementUseCase
 
-interface SantaFloorViewModel {
+class SantaFloorViewModel(
+    private val input: String,
+    private val getFloorAndBasement: GetFloorAndBasementUseCase
+) : TextSolutionViewModelImpl() {
 
-    val floor: LiveData<Int>
+    override suspend fun calculatePuzzle() {
+        val (floor, basementPosition) = getFloorAndBasement(input)
 
-    val basementPosition: LiveData<Int>
+        firstValue.postValue(floor.toString())
+        secondValue.postValue(basementPosition.toString())
+    }
 }

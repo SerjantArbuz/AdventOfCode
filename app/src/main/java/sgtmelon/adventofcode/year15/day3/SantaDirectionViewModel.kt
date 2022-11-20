@@ -1,19 +1,17 @@
 package sgtmelon.adventofcode.year15.day3
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import sgtmelon.adventofcode.staff.parent.textSolution.TextSolutionViewModelImpl
 import sgtmelon.adventofcode.year15.day3.useCase.GetUniqueHousesUseCase
 import sgtmelon.adventofcode.year15.day3.useCase.GetWithRobotHousesUseCase
 
 class SantaDirectionViewModel(
-    input: String,
-    getUniqueHouses: GetUniqueHousesUseCase,
-    getWithRobotHouses: GetWithRobotHousesUseCase
-) : ViewModel() {
+    private val input: String,
+    private val getUniqueHouses: GetUniqueHousesUseCase,
+    private val getWithRobotHouses: GetWithRobotHousesUseCase
+) : TextSolutionViewModelImpl() {
 
-    val uniqueHouses: LiveData<Int> = MutableLiveData(getUniqueHouses(input).size)
-
-    val workWithRobot: LiveData<Int> = MutableLiveData(getWithRobotHouses(input).size)
-
+    override suspend fun calculatePuzzle() {
+        firstValue.postValue(getUniqueHouses(input).size.toString())
+        secondValue.postValue(getWithRobotHouses(input).size.toString())
+    }
 }

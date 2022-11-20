@@ -2,7 +2,7 @@ package sgtmelon.adventofcode.year21.day10
 
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import sgtmelon.adventofcode.R
-import sgtmelon.adventofcode.parent.ParentTextSolutionActivity
+import sgtmelon.adventofcode.staff.parent.ParentTextSolutionActivity
 
 /**
  * 2021 Day 10. Takes around ~2 hours for both puzzle parts.

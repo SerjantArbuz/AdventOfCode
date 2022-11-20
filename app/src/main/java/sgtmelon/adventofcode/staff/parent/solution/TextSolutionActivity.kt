@@ -1,4 +1,4 @@
-package sgtmelon.adventofcode.staff.parent.textSolution
+package sgtmelon.adventofcode.staff.parent.solution
 
 /**
  * Parent class for solutions with 2 text fields and implemented [viewModel].

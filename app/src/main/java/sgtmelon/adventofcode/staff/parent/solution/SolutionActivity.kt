@@ -1,4 +1,4 @@
-package sgtmelon.adventofcode.staff.parent.textSolution
+package sgtmelon.adventofcode.staff.parent.solution
 
 import android.view.View
 import androidx.annotation.StringRes

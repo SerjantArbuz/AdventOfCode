@@ -2,7 +2,7 @@ package sgtmelon.adventofcode.year15.day4
 
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import sgtmelon.adventofcode.R
-import sgtmelon.adventofcode.staff.parent.textSolution.SolutionActivity
+import sgtmelon.adventofcode.staff.parent.solution.SolutionActivity
 import sgtmelon.adventofcode.staff.utils.collect
 import sgtmelon.adventofcode.year15.day4.model.HashState
 

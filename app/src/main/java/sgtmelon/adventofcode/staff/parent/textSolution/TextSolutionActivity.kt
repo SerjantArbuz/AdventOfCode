@@ -10,6 +10,7 @@ abstract class TextSolutionActivity : SolutionActivity() {
     override fun setupObservers() {
         super.setupObservers()
 
+        viewModel.loading.observe(this) { changeProgress(it) }
         viewModel.firstValue.observe(this) { setFirstText(it.toString()) }
         viewModel.secondValue.observe(this) { setSecondText(it.toString()) }
     }

@@ -1,5 +1,6 @@
 package sgtmelon.adventofcode.staff.parent.textSolution
 
+import android.view.View
 import androidx.annotation.StringRes
 import sgtmelon.adventofcode.R
 import sgtmelon.adventofcode.databinding.ActivitySolutionBinding
@@ -21,6 +22,10 @@ abstract class SolutionActivity : ParentActivity<ActivitySolutionBinding>() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = getString(titleId)
         supportActionBar?.subtitle = getString(subtitleId)
+    }
+
+    protected fun changeProgress(isVisible: Boolean) {
+        binding?.progressBar?.visibility = if (isVisible) View.VISIBLE else View.INVISIBLE
     }
 
     protected fun setFirstText(it: String) = run { binding?.firstText?.text = it }

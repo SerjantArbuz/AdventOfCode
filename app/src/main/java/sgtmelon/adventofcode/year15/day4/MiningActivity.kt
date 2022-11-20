@@ -32,7 +32,10 @@ class MiningActivity : SolutionActivity() {
 
     private fun collectSecond(firstResult: HashState.Result) {
         viewModel.getSecondValue(firstResult).collect(this) {
-            setSecondText(it.toString())
+            when (it) {
+                is HashState.Iteration -> setSecondText(it.toString())
+                is HashState.Result -> changeProgress(isVisible = false)
+            }
         }
     }
 }

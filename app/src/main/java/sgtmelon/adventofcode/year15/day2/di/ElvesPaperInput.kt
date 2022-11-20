@@ -2,7 +2,7 @@ package sgtmelon.adventofcode.year15.day2.di
 
 class ElvesPaperInput {
 
-    fun getInput(): String {
+    fun get(): String {
         return "29x13x26\n11x11x14\n27x2x5\n6x10x13\n15x19x10\n26x29x15\n8x23x6\n17x8x26\n20x28x3\n23x12x24\n11x17x3\n19x23x28\n25x2x25\n1x15x3\n25x14x4\n23x10x23\n" +
                 "29x19x7\n17x10x13\n26x30x4\n16x7x16\n7x5x27\n8x23x6\n2x20x2\n18x4x24\n30x2x26\n6x14x23\n10x23x9\n29x29x22\n1x21x14\n22x10x13\n10x12x10\n20x13x11\n" +
                 "12x2x14\n2x16x29\n27x18x26\n6x12x20\n18x17x8\n14x25x1\n30x15x22\n17x18x7\n28x23x24\n15x12x25\n14x7x20\n29x23x8\n24x5x22\n6x22x8\n1x15x26\n14x5x1\n" +

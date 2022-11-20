@@ -16,13 +16,13 @@ class ElvesPaperViewModelImpl(
 ) : ViewModel(),
     ElvesPaperViewModel {
 
-    init {
-        viewModelScope.launchBack { calculatePaperAndRibbon() }
-    }
-
     override val paperNeeded: MutableLiveData<Long> = MutableLiveData()
 
     override val ribbonNeeded: MutableLiveData<Long> = MutableLiveData()
+
+    init {
+        viewModelScope.launchBack { calculatePaperAndRibbon() }
+    }
 
     private fun calculatePaperAndRibbon() {
         var totalPaper = 0L

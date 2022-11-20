@@ -11,7 +11,7 @@ object Year15Day2InjectionModule {
     val module = module {
 
         viewModel {
-            ElvesPaperViewModelImpl(ElvesPaperInput().getInput(), get(), get(), get())
+            ElvesPaperViewModelImpl(ElvesPaperInput().get(), get(), get(), get())
         }
 
         factory { GetSquareUseCase() }

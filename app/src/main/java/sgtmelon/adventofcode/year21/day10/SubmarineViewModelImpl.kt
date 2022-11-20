@@ -20,13 +20,13 @@ class SubmarineViewModelImpl(
 ) : ViewModel(),
     SubmarineViewModel {
 
-    init {
-        viewModelScope.launch(Dispatchers.IO) { calculatePoints() }
-    }
-
     override val corruptedPoints: MutableLiveData<Int> = MutableLiveData()
 
     override val incompletePoints: MutableLiveData<Long> = MutableLiveData()
+
+    init {
+        viewModelScope.launch(Dispatchers.IO) { calculatePoints() }
+    }
 
     private fun calculatePoints() {
         val lineList = splitText(input)

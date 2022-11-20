@@ -12,6 +12,10 @@ class SantaFloorViewModelImpl(
 ) : ViewModel(),
     SantaFloorViewModel {
 
+    override val floor: MutableLiveData<Int> = MutableLiveData()
+
+    override val basementPosition: MutableLiveData<Int> = MutableLiveData()
+
     init {
         viewModelScope.launchBack {
             val (floor, basementPosition) = getFloorAndBasement(input)
@@ -20,8 +24,4 @@ class SantaFloorViewModelImpl(
             this.basementPosition.postValue(basementPosition)
         }
     }
-
-    override val floor: MutableLiveData<Int> = MutableLiveData()
-
-    override val basementPosition: MutableLiveData<Int> = MutableLiveData()
 }

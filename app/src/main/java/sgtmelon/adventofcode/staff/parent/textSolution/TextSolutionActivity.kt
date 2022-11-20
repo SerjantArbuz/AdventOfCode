@@ -1,5 +1,6 @@
 package sgtmelon.adventofcode.staff.parent.textSolution
 
+import android.view.View
 import androidx.annotation.StringRes
 import sgtmelon.adventofcode.R
 import sgtmelon.adventofcode.databinding.ActivitySolutionBinding
@@ -28,12 +29,17 @@ abstract class TextSolutionActivity : ParentActivity<ActivitySolutionBinding>() 
     override fun setupObservers() {
         super.setupObservers()
 
+        viewModel.loading.observe(this) { changeProgress(it) }
         viewModel.firstValue.observe(this) { setFirstText(it.toString()) }
         viewModel.secondValue.observe(this) { setSecondText(it.toString()) }
     }
 
-    fun setFirstText(it: String) = run { binding?.firstText?.text = it }
+    private fun changeProgress(isVisible: Boolean) {
+        binding?.progressBar?.visibility = if (isVisible) View.VISIBLE else View.INVISIBLE
+    }
 
-    fun setSecondText(it: String) = run { binding?.secondText?.text = it }
+    private fun setFirstText(it: String) = run { binding?.firstText?.text = it }
+
+    private fun setSecondText(it: String) = run { binding?.secondText?.text = it }
 
 }

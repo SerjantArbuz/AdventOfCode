@@ -1,6 +1,7 @@
 package sgtmelon.adventofcode.year15.day4
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import kotlinx.coroutines.flow.Flow
@@ -16,12 +17,14 @@ class MiningViewModel(
 ) : ViewModel(),
     TextSolutionViewModel {
 
+    override val loading: LiveData<Boolean> = MutableLiveData(false)
+
     override val firstValue: LiveData<String> = getHash(prefix = "00000").asLiveData()
 
     override val secondValue: LiveData<String> = getHash(prefix = "000000").asLiveData()
 
     private fun getHash(prefix: String): Flow<String> = flowOnBack {
-        var hash = ""
+        var hash: String
         var i = 0L
 
         do {

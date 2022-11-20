@@ -8,9 +8,8 @@ import sgtmelon.adventofcode.year15.day6.model.Instruction
 class GetInstructionUseCase {
 
     operator fun invoke(text: String): Instruction {
-        val command = Command.values().firstOrNull {
-            text.startsWith(it.value)
-        } ?: throw WrongInputCharException(text)
+        val command = Command.values().firstOrNull { text.startsWith(it.value) }
+            ?: throw WrongInputCharException(text)
 
         val (start, end) = try {
             parseCoordinates(text, command)
@@ -26,8 +25,7 @@ class GetInstructionUseCase {
         command: Command
     ): Pair<Pair<Int, Int>, Pair<Int, Int>> {
         val coordinateList = text.replace("${command.value} ", "")
-            .replace(" through ", "/")
-            .split("/")
+            .split(" through ")
 
         fun getPair(coordinate: String): Pair<Int, Int> = with(coordinate) {
             return substringBefore(',').toInt() to substringAfter(',').toInt()

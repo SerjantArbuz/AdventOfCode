@@ -4,6 +4,8 @@ import androidx.lifecycle.LiveData
 
 interface TextSolutionViewModel {
 
+    val loading: LiveData<Boolean>
+
     val firstValue: LiveData<String>
 
     val secondValue: LiveData<String>

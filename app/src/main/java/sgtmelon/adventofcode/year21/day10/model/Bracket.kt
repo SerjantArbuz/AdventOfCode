@@ -33,7 +33,7 @@ sealed class Bracket(val char: Char) {
             Close.Square.char -> Close.Square
             Close.Curly.char -> Close.Curly
             Close.Corner.char -> Close.Corner
-            else -> throw WrongInputCharException()
+            else -> throw WrongInputCharException(char)
         }
     }
 }

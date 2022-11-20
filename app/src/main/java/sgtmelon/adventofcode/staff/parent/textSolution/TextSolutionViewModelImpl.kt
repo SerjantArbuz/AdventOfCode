@@ -13,7 +13,13 @@ abstract class TextSolutionViewModelImpl : ViewModel(),
     override val secondValue: MutableLiveData<String> = MutableLiveData()
 
     init {
-        viewModelScope.launchBack { calculatePuzzle() }
+        viewModelScope.launchBack {
+            try {
+                calculatePuzzle()
+            } catch (e: Throwable) {
+                e.printStackTrace()
+            }
+        }
     }
 
     abstract suspend fun calculatePuzzle()

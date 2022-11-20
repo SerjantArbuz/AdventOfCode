@@ -16,4 +16,7 @@
     <string name="year2015day5_title">Nice strings</string>
     <string name="year2015day5_subtitle">Help find naughty and nice strings</string>
 
+    <string name="year2015day6_title">Fire Hazard</string>
+    <string name="year2015day6_subtitle">One million lights in a 1000x1000 grid</string>
+
 </resources>

@@ -3,54 +3,66 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        tools:context=".year21.day10.SubmarineActivity">
+        android:layout_height="match_parent">
 
-        <TextView
+        <ProgressBar
+            android:id="@+id/progress_bar"
             android:layout_width="wrap_content"
+            android:layout_gravity="top|end"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/text_margin"
-            android:text="@string/result_title"
-            android:textColor="@color/black_main"
-            android:textSize="@dimen/title_text_size"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_margin="@dimen/progress_margin" />
 
-        <TextView
-            android:id="@+id/first_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/result_loading"
-            android:layout_margin="@dimen/text_margin"
-            android:textSize="@dimen/subtitle_text_size"
-            android:textColor="@color/black_second"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:gravity="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="@tools:sample/lorem" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/second_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/result_loading"
-            android:textSize="@dimen/subtitle_text_size"
-            android:textColor="@color/black_second"
-            android:gravity="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="@tools:sample/lorem" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:text="@string/result_title"
+                android:textColor="@color/black_main"
+                android:textSize="@dimen/title_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/first_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:gravity="center"
+                android:text="@string/result_loading"
+                android:textColor="@color/black_second"
+                android:textSize="@dimen/subtitle_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/lorem" />
+
+            <TextView
+                android:id="@+id/second_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/result_loading"
+                android:textColor="@color/black_second"
+                android:textSize="@dimen/subtitle_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/lorem" />
+
+        </LinearLayout>
+
+    </FrameLayout>
 
 </layout>

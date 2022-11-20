@@ -8,6 +8,8 @@ import sgtmelon.adventofcode.staff.utils.launchBack
 abstract class TextSolutionViewModelImpl : ViewModel(),
     TextSolutionViewModel {
 
+    override val loading: MutableLiveData<Boolean> = MutableLiveData(true)
+
     override val firstValue: MutableLiveData<String> = MutableLiveData()
 
     override val secondValue: MutableLiveData<String> = MutableLiveData()
@@ -19,6 +21,8 @@ abstract class TextSolutionViewModelImpl : ViewModel(),
             } catch (e: Throwable) {
                 e.printStackTrace()
             }
+
+            loading.postValue(false)
         }
     }
 

@@ -24,6 +24,11 @@ abstract class SolutionActivity : ParentActivity<ActivitySolutionBinding>() {
         supportActionBar?.subtitle = getString(subtitleId)
     }
 
+    protected fun setTime(value: Long) {
+        binding?.timeText?.visibility = View.VISIBLE
+        binding?.timeText?.text = getString(R.string.time_result, value)
+    }
+
     protected fun changeProgress(isVisible: Boolean) {
         binding?.progressBar?.visibility = if (isVisible) View.VISIBLE else View.INVISIBLE
     }

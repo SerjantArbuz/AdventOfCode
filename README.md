@@ -1,4 +1,4 @@
-# Advent Of Code
+# Advent Of Code 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Puzzle solutions for: [adventofcode.com](https://adventofcode.com/)
@@ -11,6 +11,11 @@ Use your own brains and logical ability to solve it.
 
 I know, you are a good **kitty**, and will use this repository only for moments where you are stuck
 or may be for improving yourself after finding a right answer. :wink:
+
+### Plans
+
+I want to solve all this puzzles and share results here.\
+At this moment, project not published in Google Play.
 
 ### Feedback
 

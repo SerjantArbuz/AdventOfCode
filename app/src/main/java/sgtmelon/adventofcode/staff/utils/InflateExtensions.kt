@@ -14,5 +14,5 @@ fun <T : ViewDataBinding> ViewGroup.inflateBinding(
     @LayoutRes layoutId: Int,
     attachToParent: Boolean = false
 ): T {
-    return DataBindingUtil.inflate(context.getInflater(), layoutId, this, attachToParent)
+    return DataBindingUtil.inflate(context.inflater, layoutId, this, attachToParent)
 }

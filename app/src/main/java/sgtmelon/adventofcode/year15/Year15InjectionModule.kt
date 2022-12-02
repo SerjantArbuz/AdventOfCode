@@ -6,6 +6,7 @@ import sgtmelon.adventofcode.year15.day3.di.Year15Day3InjectionModule
 import sgtmelon.adventofcode.year15.day4.di.Year15Day4InjectionModule
 import sgtmelon.adventofcode.year15.day5.di.Year15Day5InjectionModule
 import sgtmelon.adventofcode.year15.day6.di.Year15Day6InjectionModule
+import sgtmelon.adventofcode.year15.day7.di.Year15Day7InjectionModule
 
 object Year15InjectionModule {
 
@@ -16,5 +17,6 @@ object Year15InjectionModule {
         Year15Day4InjectionModule.module,
         Year15Day5InjectionModule.module,
         Year15Day6InjectionModule.module,
+        Year15Day7InjectionModule.module,
     )
 }

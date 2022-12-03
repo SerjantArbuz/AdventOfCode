@@ -1,35 +1,30 @@
 package sgtmelon.adventofcode.year15.day7.useCase
 
-import android.util.Log
 import sgtmelon.adventofcode.year15.day7.model.Command
 
 class CalculateWiresUseCase {
 
     operator fun invoke(commandList: List<Command>): Map<String, Int> {
-        val leftCommands = commandList.toMutableList()
+        val commandsLeftList = commandList.toMutableList()
         val resultMap = mutableMapOf<String, Int>()
 
-        var i = 0
-        do {
-            Log.i("HERE", "iteration: ${i++}")
+        while (commandsLeftList.isNotEmpty()) {
             val removeList = mutableListOf<Command>()
 
-            for (command in leftCommands) {
-                val result: Int? = when (command) {
+            for (command in commandsLeftList) {
+                val result: Int = when (command) {
                     is Command.Bool -> getBoolResult(command, resultMap)
                     is Command.Shift -> getShiftResult(command, resultMap)
                     is Command.Not -> getNotResult(command, resultMap)
                     is Command.Set -> getSetResult(command, resultMap)
-                }
+                } ?: continue
 
-                if (result != null) {
-                    resultMap[command.to] = result
-                    removeList.add(command)
-                }
+                resultMap[command.to] = result
+                removeList.add(command)
             }
 
-            leftCommands.removeAll(removeList)
-        } while (leftCommands.isNotEmpty())
+            commandsLeftList.removeAll(removeList)
+        }
 
         return resultMap
     }

@@ -16,14 +16,24 @@ class WireViewModel(
     override suspend fun calculatePuzzle() {
         val commandList = splitText(input).map { getCommand(it) }
 
-        val firstResult = calculateWires(commandList)["a"].toString()
+        val firstResult = calculateWires(commandList)
+        firstValue.postValue(firstResult.aValue())
 
-        val secondCommandList = commandList.toMutableList()
-        val bIndex = secondCommandList.indexOfFirst { it is Command.Set && it.to == "b" }
-        secondCommandList[bIndex] = Command.Set(firstResult, "b")
-        val secondResult = calculateWires(secondCommandList)
+        val secondResult = calculateWires(getSecondCommandList(commandList, firstResult.aValue()))
+        secondValue.postValue(secondResult.aValue())
+    }
 
-        firstValue.postValue(firstResult)
-        secondValue.postValue(secondResult["a"].toString())
+    private fun getSecondCommandList(
+        commandList: List<Command>,
+        firstResult: String
+    ): List<Command> {
+        val newCommandList = commandList.toMutableList()
+        val bIndex = newCommandList.indexOfFirst { it is Command.Set && it.to == "b" }
+        newCommandList[bIndex] = Command.Set(firstResult, to = "b")
+        return newCommandList
+    }
+
+    private fun Map<String, Int>.aValue(): String {
+        return this["a"]?.toString() ?: throw NullPointerException("Didn't found `a` value!")
     }
 }

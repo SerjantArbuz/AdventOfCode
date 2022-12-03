@@ -1,7 +1,6 @@
 package sgtmelon.adventofcode.year15.day6.useCase
 
 import sgtmelon.adventofcode.staff.model.exception.WrongInputCharException
-import sgtmelon.adventofcode.staff.model.exception.WrongParseException
 import sgtmelon.adventofcode.year15.day6.model.Command
 import sgtmelon.adventofcode.year15.day6.model.Instruction
 
@@ -11,11 +10,7 @@ class GetInstructionUseCase {
         val command = Command.values().firstOrNull { text.startsWith(it.value) }
             ?: throw WrongInputCharException(text)
 
-        val (start, end) = try {
-            parseCoordinates(text, command)
-        } catch (e: Throwable) {
-            throw WrongParseException(e)
-        }
+        val (start, end) = parseCoordinates(text, command)
 
         return Instruction(command, start, end)
     }

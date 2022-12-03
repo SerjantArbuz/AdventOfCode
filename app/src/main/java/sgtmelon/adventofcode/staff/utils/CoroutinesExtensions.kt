@@ -10,13 +10,16 @@ import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 inline fun CoroutineScope.launchBack(crossinline func: suspend () -> Unit): Job {
     return launch(Dispatchers.IO) { func() }
 }
 
 inline fun <T> Flow<T>.collect(owner: LifecycleOwner, crossinline onCollect: (T) -> Unit) {
-    owner.lifecycleScope.launch { collect { onCollect(it) } }
+    owner.lifecycleScope.launch(Dispatchers.IO) {
+        collect { withContext(Dispatchers.Main) { onCollect(it) } }
+    }
 }
 
 inline fun <T> flowOnBack(crossinline block: suspend FlowCollector<T>.() -> Unit): Flow<T> {

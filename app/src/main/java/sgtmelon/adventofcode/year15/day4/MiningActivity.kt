@@ -19,6 +19,11 @@ class MiningActivity : SolutionActivity() {
 
     val viewModel: MiningViewModel by viewModel<MiningViewModelImpl>()
 
+    override fun setupView() {
+        super.setupView()
+        changeProgress(isVisible = false)
+    }
+
     override fun setupObservers() {
         super.setupObservers()
 
@@ -34,7 +39,7 @@ class MiningActivity : SolutionActivity() {
         viewModel.getSecondValue(firstResult).collect(this) {
             when (it) {
                 is HashState.Iteration -> setSecondText(it.toString())
-                is HashState.Result -> changeProgress(isVisible = false)
+                is HashState.Result -> return@collect
             }
         }
     }

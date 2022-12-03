@@ -2,6 +2,7 @@ package sgtmelon.adventofcode.year15.day7
 
 import sgtmelon.adventofcode.staff.common.SplitTextUseCase
 import sgtmelon.adventofcode.staff.parent.solution.TextSolutionViewModelImpl
+import sgtmelon.adventofcode.year15.day7.model.Command
 import sgtmelon.adventofcode.year15.day7.useCase.CalculateWiresUseCase
 import sgtmelon.adventofcode.year15.day7.useCase.GetCommandUseCase
 
@@ -14,8 +15,15 @@ class WireViewModel(
 
     override suspend fun calculatePuzzle() {
         val commandList = splitText(input).map { getCommand(it) }
-        val resultMap = calculateWires(commandList)
 
-        firstValue.postValue("a = ${resultMap["a"]}")
+        val firstResult = calculateWires(commandList)["a"].toString()
+
+        val secondCommandList = commandList.toMutableList()
+        val bIndex = secondCommandList.indexOfFirst { it is Command.Set && it.to == "b" }
+        secondCommandList[bIndex] = Command.Set(firstResult, "b")
+        val secondResult = calculateWires(secondCommandList)
+
+        firstValue.postValue(firstResult)
+        secondValue.postValue(secondResult["a"].toString())
     }
 }

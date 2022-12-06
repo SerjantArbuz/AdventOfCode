@@ -13,15 +13,20 @@ class FireHazardViewModel(
 ) : TextSolutionViewModelImpl() {
 
     override suspend fun calculatePuzzle() {
-        val lightMap = mutableMapOf<String, Boolean>()
-        val brightMap = mutableMapOf<String, Int>()
+        val gridArray = Array(COLUMN_COUNT) { Array(ROW_COUNT) { false to 0 } }
 
         for (line in splitText(input)) {
-            val instruction = getInstruction(line)
-            applyInstruction(instruction, lightMap, brightMap)
+            applyInstruction(gridArray, getInstruction(line))
         }
 
-        firstValue.postValue(lightMap.count { it.value }.toString())
-        secondValue.postValue(brightMap.values.sum().toString())
+        with(gridArray) {
+            firstValue.postValue(sumOf { row -> row.count { it.first } }.toString())
+            secondValue.postValue(sumOf { row -> row.sumOf { it.second } }.toString())
+        }
+    }
+
+    companion object {
+        const val COLUMN_COUNT = 1000
+        const val ROW_COUNT = 1000
     }
 }

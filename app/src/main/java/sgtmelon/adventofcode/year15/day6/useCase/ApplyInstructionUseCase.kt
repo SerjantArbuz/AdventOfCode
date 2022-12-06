@@ -6,25 +6,22 @@ import sgtmelon.adventofcode.year15.day6.model.Instruction
 
 class ApplyInstructionUseCase {
 
-    operator fun invoke(
-        instruction: Instruction,
-        lightMap: MutableMap<String, Boolean>,
-        brightMap: MutableMap<String, Int>
-    ) {
+    operator fun invoke(gridArray: Array<Array<Pair<Boolean, Int>>>, instruction: Instruction) {
         val (x1, y1) = instruction.start
         val (x2, y2) = instruction.end
 
-        for (i in (x1..x2)) {
-            for (j in (y1..y2)) {
-                val key = "$i/$j"
+        for (y in (y1..y2)) {
+            for (x in (x1..x2)) {
+                val (value, bright) = gridArray[x][y]
 
-                lightMap[key] = when (instruction.command) {
+                val newValue = when (instruction.command) {
                     Command.ON -> true
                     Command.OFF -> false
-                    Command.TOGGLE -> !(lightMap[key] ?: false)
+                    Command.TOGGLE -> !value
                 }
+                val newBright = max(a = bright + instruction.command.bright, b = 0)
 
-                brightMap[key] = max(a = (brightMap[key] ?: 0) + instruction.command.bright, b = 0)
+                gridArray[x][y] = newValue to newBright
             }
         }
     }

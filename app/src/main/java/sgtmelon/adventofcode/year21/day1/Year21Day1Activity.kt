@@ -5,7 +5,7 @@ import sgtmelon.adventofcode.R
 import sgtmelon.adventofcode.staff.parent.solution.TextSolutionActivity
 
 /**
- * 2021 Day 1. Final time: ?.
+ * 2021 Day 1. Final time: 4m + ?.
  *
  * https://adventofcode.com/2021/day/1
  */

@@ -1,6 +1,6 @@
 package sgtmelon.adventofcode.year15.day1
 
-import sgtmelon.adventofcode.app.parent.solution.TextSolutionViewModelImpl
+import sgtmelon.adventofcode.app.presentation.screen.parent.solution.TextSolutionViewModelImpl
 import sgtmelon.adventofcode.year15.day1.useCase.GetFloorAndBasementUseCase
 
 class Year15Day1ViewModel(

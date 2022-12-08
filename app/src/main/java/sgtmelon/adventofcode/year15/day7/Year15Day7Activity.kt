@@ -2,7 +2,7 @@ package sgtmelon.adventofcode.year15.day7
 
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import sgtmelon.adventofcode.R
-import sgtmelon.adventofcode.app.parent.solution.TextSolutionActivity
+import sgtmelon.adventofcode.app.presentation.screen.parent.solution.TextSolutionActivity
 
 /**
  * 2015 Day 7. Final time: 44m + 8m = 52m in total.

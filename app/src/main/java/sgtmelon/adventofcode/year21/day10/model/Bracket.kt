@@ -1,6 +1,6 @@
 package sgtmelon.adventofcode.year21.day10.model
 
-import sgtmelon.adventofcode.app.model.exception.WrongInputCharException
+import sgtmelon.adventofcode.app.presentation.model.exception.WrongInputCharException
 
 sealed class Bracket(val char: Char) {
 

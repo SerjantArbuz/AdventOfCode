@@ -1,7 +1,7 @@
 package sgtmelon.adventofcode.year21.day1
 
-import sgtmelon.adventofcode.app.common.SplitTextUseCase
-import sgtmelon.adventofcode.app.parent.solution.TextSolutionViewModelImpl
+import sgtmelon.adventofcode.app.domain.SplitTextUseCase
+import sgtmelon.adventofcode.app.presentation.screen.parent.solution.TextSolutionViewModelImpl
 import sgtmelon.adventofcode.year21.day1.useCase.CalculateChangesUseCase
 
 class Year21Day1ViewModel(

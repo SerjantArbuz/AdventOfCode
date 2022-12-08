@@ -1,6 +1,6 @@
 package sgtmelon.adventofcode.year15.day3.model
 
-import sgtmelon.adventofcode.app.model.exception.WrongInputCharException
+import sgtmelon.adventofcode.app.presentation.model.exception.WrongInputCharException
 
 /**
  * north (^), south (v), east (>), or west (<)

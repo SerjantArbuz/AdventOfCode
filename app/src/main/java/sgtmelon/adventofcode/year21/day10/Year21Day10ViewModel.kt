@@ -1,7 +1,7 @@
 package sgtmelon.adventofcode.year21.day10
 
-import sgtmelon.adventofcode.app.common.SplitTextUseCase
-import sgtmelon.adventofcode.app.parent.solution.TextSolutionViewModelImpl
+import sgtmelon.adventofcode.app.domain.SplitTextUseCase
+import sgtmelon.adventofcode.app.presentation.screen.parent.solution.TextSolutionViewModelImpl
 import sgtmelon.adventofcode.year21.day10.model.LineType
 import sgtmelon.adventofcode.year21.day10.useCase.GetIncompletePointsUseCase
 import sgtmelon.adventofcode.year21.day10.useCase.GetLineTypeUseCase

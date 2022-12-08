@@ -4,24 +4,27 @@ class CalculateChangesUseCase {
 
     operator fun invoke(lineList: List<String>): Pair<Int, Int> {
         var singlePreviousValue: Int? = null
-        var singleIncreaseCount = 0
+        var singleIncreaseSequence = 0
 
-        var threePreviousSum: Int? = null
-        var threeIncreaseCount = 0
+        var triplePreviousSum: Int? = null
+        var tripleIncreaseSequence = 0
 
         for ((i, line) in lineList.withIndex()) {
             val value = line.toInt()
 
-            singlePreviousValue?.let { if (value > it) singleIncreaseCount++ }
+            singlePreviousValue?.let { if (value > it) singleIncreaseSequence++ }
             singlePreviousValue = value
 
-            if (i + 2 in lineList.indices) {
-                val currentSum = value + lineList[i + 1].toInt() + lineList[i + 2].toInt()
-                threePreviousSum?.let { if (currentSum > it) threeIncreaseCount++ }
-                threePreviousSum = currentSum
+            val firstNextValue = lineList.getOrNull(index = i + 1)?.toInt()
+            val secondNextValue = lineList.getOrNull(index = i + 2)?.toInt()
+
+            if (firstNextValue != null && secondNextValue != null) {
+                val currentSum = value + firstNextValue + secondNextValue
+                triplePreviousSum?.let { if (currentSum > it) tripleIncreaseSequence++ }
+                triplePreviousSum = currentSum
             }
         }
 
-        return singleIncreaseCount to threeIncreaseCount
+        return singleIncreaseSequence to tripleIncreaseSequence
     }
 }

@@ -11,9 +11,9 @@ class Year21Day1ViewModel(
 ) : TextSolutionViewModelImpl() {
 
     override suspend fun calculatePuzzle() {
-        val (singleIncreaseCount, threeIncreaseCount) = calculateChanges(splitText(input))
+        val (singleSequence, tripleSequence) = calculateChanges(splitText(input))
 
-        firstValue.postValue(singleIncreaseCount.toString())
-        secondValue.postValue(threeIncreaseCount.toString())
+        firstValue.postValue(singleSequence.toString())
+        secondValue.postValue(tripleSequence.toString())
     }
 }

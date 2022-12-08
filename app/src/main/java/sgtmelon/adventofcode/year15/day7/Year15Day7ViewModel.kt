@@ -1,7 +1,7 @@
 package sgtmelon.adventofcode.year15.day7
 
-import sgtmelon.adventofcode.staff.common.SplitTextUseCase
-import sgtmelon.adventofcode.staff.parent.solution.TextSolutionViewModelImpl
+import sgtmelon.adventofcode.app.common.SplitTextUseCase
+import sgtmelon.adventofcode.app.parent.solution.TextSolutionViewModelImpl
 import sgtmelon.adventofcode.year15.day7.model.Command
 import sgtmelon.adventofcode.year15.day7.useCase.CalculateWiresUseCase
 import sgtmelon.adventofcode.year15.day7.useCase.GetCommandUseCase

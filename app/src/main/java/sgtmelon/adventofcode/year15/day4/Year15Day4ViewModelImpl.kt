@@ -2,7 +2,7 @@ package sgtmelon.adventofcode.year15.day4
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.Flow
-import sgtmelon.adventofcode.staff.utils.flowOnBack
+import sgtmelon.adventofcode.app.utils.flowOnBack
 import sgtmelon.adventofcode.year15.day4.model.HashState
 import sgtmelon.adventofcode.year15.day4.useCase.GetHexUseCase
 import sgtmelon.adventofcode.year15.day4.useCase.GetMD5UseCase

@@ -1,6 +1,6 @@
 package sgtmelon.adventofcode.year15.day3
 
-import sgtmelon.adventofcode.staff.parent.solution.TextSolutionViewModelImpl
+import sgtmelon.adventofcode.app.parent.solution.TextSolutionViewModelImpl
 import sgtmelon.adventofcode.year15.day3.useCase.GetUniqueHousesUseCase
 import sgtmelon.adventofcode.year15.day3.useCase.GetWithRobotHousesUseCase
 

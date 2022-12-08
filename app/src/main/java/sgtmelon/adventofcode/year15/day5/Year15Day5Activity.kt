@@ -2,7 +2,7 @@ package sgtmelon.adventofcode.year15.day5
 
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import sgtmelon.adventofcode.R
-import sgtmelon.adventofcode.staff.parent.solution.TextSolutionActivity
+import sgtmelon.adventofcode.app.parent.solution.TextSolutionActivity
 
 /**
  * 2015 Day 5. Final time: 1h 15m minutes.

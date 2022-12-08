@@ -1,7 +1,7 @@
 package sgtmelon.adventofcode.year15.day2
 
-import sgtmelon.adventofcode.staff.common.SplitTextUseCase
-import sgtmelon.adventofcode.staff.parent.solution.TextSolutionViewModelImpl
+import sgtmelon.adventofcode.app.common.SplitTextUseCase
+import sgtmelon.adventofcode.app.parent.solution.TextSolutionViewModelImpl
 import sgtmelon.adventofcode.year15.day2.useCase.GetSquareUseCase
 import sgtmelon.adventofcode.year15.day2.useCase.GetSurfaceAreaUseCase
 

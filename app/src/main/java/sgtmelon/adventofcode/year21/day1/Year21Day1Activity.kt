@@ -2,7 +2,7 @@ package sgtmelon.adventofcode.year21.day1
 
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import sgtmelon.adventofcode.R
-import sgtmelon.adventofcode.staff.parent.solution.TextSolutionActivity
+import sgtmelon.adventofcode.app.parent.solution.TextSolutionActivity
 
 /**
  * 2021 Day 1. Final time: 4m + 7m = 11m.

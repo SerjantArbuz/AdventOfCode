@@ -1,6 +1,6 @@
 package sgtmelon.adventofcode.year15.day6.useCase
 
-import sgtmelon.adventofcode.staff.model.exception.WrongInputCharException
+import sgtmelon.adventofcode.app.model.exception.WrongInputCharException
 import sgtmelon.adventofcode.year15.day6.model.Command
 import sgtmelon.adventofcode.year15.day6.model.Instruction
 

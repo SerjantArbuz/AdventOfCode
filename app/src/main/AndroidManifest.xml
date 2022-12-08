@@ -37,7 +37,7 @@
         <activity android:name=".year15.day7.WireActivity" />
 
         <activity android:name=".year21.day1.Year21Day1Activity" />
-        <activity android:name=".year21.day10.SubmarineActivity" />
+        <activity android:name=".year21.day10.Year21Day10Activity" />
 
     </application>
 

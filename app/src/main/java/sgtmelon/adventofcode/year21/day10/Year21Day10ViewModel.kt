@@ -7,7 +7,7 @@ import sgtmelon.adventofcode.year21.day10.useCase.GetIncompletePointsUseCase
 import sgtmelon.adventofcode.year21.day10.useCase.GetLineTypeUseCase
 import sgtmelon.adventofcode.year21.day10.useCase.GetMiddleValueUseCase
 
-class SubmarineViewModel(
+class Year21Day10ViewModel(
     private val input: String,
     private val splitText: SplitTextUseCase,
     private val getLineType: GetLineTypeUseCase,

@@ -3,7 +3,7 @@ package sgtmelon.adventofcode.year21.day10.di
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
-import sgtmelon.adventofcode.year21.day10.SubmarineViewModel
+import sgtmelon.adventofcode.year21.day10.Year21Day10ViewModel
 import sgtmelon.adventofcode.year21.day10.useCase.GetIncompletePointsUseCase
 import sgtmelon.adventofcode.year21.day10.useCase.GetLineTypeUseCase
 import sgtmelon.adventofcode.year21.day10.useCase.GetMiddleValueUseCase
@@ -13,7 +13,7 @@ object Year21Day10InjectionModule {
     val module = module {
 
         viewModel {
-            SubmarineViewModel(get(named(INPUT)), get(), get(), get(), get())
+            Year21Day10ViewModel(get(named(INPUT)), get(), get(), get(), get())
         }
 
         factory(named(INPUT)) { Year21Day10Input().get() }

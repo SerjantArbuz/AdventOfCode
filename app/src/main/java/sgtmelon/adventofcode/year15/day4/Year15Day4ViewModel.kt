@@ -3,7 +3,7 @@ package sgtmelon.adventofcode.year15.day4
 import kotlinx.coroutines.flow.Flow
 import sgtmelon.adventofcode.year15.day4.model.HashState
 
-interface MiningViewModel {
+interface Year15Day4ViewModel {
 
     val firstValue: Flow<HashState>
 

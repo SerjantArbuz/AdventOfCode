@@ -11,13 +11,13 @@ import sgtmelon.adventofcode.year15.day4.model.HashState
  *
  * https://adventofcode.com/2015/day/4
  */
-class MiningActivity : SolutionActivity() {
+class Year15Day4Activity : SolutionActivity() {
 
     override val titleId: Int = R.string.year2015day4_title
 
     override val subtitleId: Int = R.string.year2015day4_subtitle
 
-    val viewModel: MiningViewModel by viewModel<MiningViewModelImpl>()
+    val viewModel: Year15Day4ViewModel by viewModel<Year15Day4ViewModelImpl>()
 
     override fun setupView() {
         super.setupView()

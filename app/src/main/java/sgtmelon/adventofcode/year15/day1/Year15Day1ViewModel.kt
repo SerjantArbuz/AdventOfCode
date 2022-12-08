@@ -3,7 +3,7 @@ package sgtmelon.adventofcode.year15.day1
 import sgtmelon.adventofcode.staff.parent.solution.TextSolutionViewModelImpl
 import sgtmelon.adventofcode.year15.day1.useCase.GetFloorAndBasementUseCase
 
-class SantaFloorViewModel(
+class Year15Day1ViewModel(
     private val input: String,
     private val getFloorAndBasement: GetFloorAndBasementUseCase
 ) : TextSolutionViewModelImpl() {

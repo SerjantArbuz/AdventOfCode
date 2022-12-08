@@ -7,12 +7,12 @@ import sgtmelon.adventofcode.year15.day4.model.HashState
 import sgtmelon.adventofcode.year15.day4.useCase.GetHexUseCase
 import sgtmelon.adventofcode.year15.day4.useCase.GetMD5UseCase
 
-class MiningViewModelImpl(
+class Year15Day4ViewModelImpl(
     private val input: String,
     private val getMD5: GetMD5UseCase,
     private val getHex: GetHexUseCase
 ) : ViewModel(),
-    MiningViewModel {
+    Year15Day4ViewModel {
 
     override val firstValue: Flow<HashState> get() = getHash(FIRST_PREFIX)
 

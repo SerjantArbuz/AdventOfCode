@@ -25,16 +25,17 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="sgtmelon.adventofcode.staff.menu.SolutionMenuActivity"
-            android:parentActivityName="sgtmelon.adventofcode.staff.menu.MainMenuActivity"/>
+        <activity
+            android:name="sgtmelon.adventofcode.staff.menu.SolutionMenuActivity"
+            android:parentActivityName="sgtmelon.adventofcode.staff.menu.MainMenuActivity" />
 
-        <activity android:name=".year15.day1.SantaFloorActivity" />
-        <activity android:name=".year15.day2.ElvesPaperActivity" />
-        <activity android:name=".year15.day3.SantaDirectionActivity" />
-        <activity android:name=".year15.day4.MiningActivity" />
-        <activity android:name=".year15.day5.NiceStringActivity" />
-        <activity android:name=".year15.day6.FireHazardActivity" />
-        <activity android:name=".year15.day7.WireActivity" />
+        <activity android:name=".year15.day1.Year15Day1Activity" />
+        <activity android:name=".year15.day2.Year15Day2Activity" />
+        <activity android:name=".year15.day3.Year15Day3Activity" />
+        <activity android:name=".year15.day4.Year15Day4Activity" />
+        <activity android:name=".year15.day5.Year15Day5Activity" />
+        <activity android:name=".year15.day6.Year15Day6Activity" />
+        <activity android:name=".year15.day7.Year15Day7Activity" />
 
         <activity android:name=".year21.day1.Year21Day1Activity" />
         <activity android:name=".year21.day10.Year21Day10Activity" />

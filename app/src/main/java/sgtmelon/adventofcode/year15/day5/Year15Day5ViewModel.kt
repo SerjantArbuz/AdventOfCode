@@ -5,7 +5,7 @@ import sgtmelon.adventofcode.staff.parent.solution.TextSolutionViewModelImpl
 import sgtmelon.adventofcode.year15.day5.useCase.IsNiceString1UseCase
 import sgtmelon.adventofcode.year15.day5.useCase.IsNiceString2UseCase
 
-class NiceStringViewModel(
+class Year15Day5ViewModel(
     private val input: String,
     private val splitText: SplitTextUseCase,
     private val isNiceString1: IsNiceString1UseCase,

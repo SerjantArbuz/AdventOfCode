@@ -3,26 +3,27 @@ package sgtmelon.adventofcode.staff.menu.useCase
 import sgtmelon.adventofcode.staff.menu.model.Day
 import sgtmelon.adventofcode.staff.menu.model.Solution
 import sgtmelon.adventofcode.staff.menu.model.Year
-import sgtmelon.adventofcode.year15.day1.SantaFloorActivity
-import sgtmelon.adventofcode.year15.day2.ElvesPaperActivity
-import sgtmelon.adventofcode.year15.day3.SantaDirectionActivity
-import sgtmelon.adventofcode.year15.day4.MiningActivity
-import sgtmelon.adventofcode.year15.day5.NiceStringActivity
-import sgtmelon.adventofcode.year15.day6.FireHazardActivity
-import sgtmelon.adventofcode.year15.day7.WireActivity
+import sgtmelon.adventofcode.year15.day1.Year15Day1Activity
+import sgtmelon.adventofcode.year15.day2.Year15Day2Activity
+import sgtmelon.adventofcode.year15.day3.Year15Day3Activity
+import sgtmelon.adventofcode.year15.day4.Year15Day4Activity
+import sgtmelon.adventofcode.year15.day5.Year15Day5Activity
+import sgtmelon.adventofcode.year15.day6.Year15Day6Activity
+import sgtmelon.adventofcode.year15.day7.Year15Day7Activity
 import sgtmelon.adventofcode.year21.day1.Year21Day1Activity
 import sgtmelon.adventofcode.year21.day10.Year21Day10Activity
 
 class GetYearsUseCase {
 
     private val solvedList: List<Pair<Int, Day>> = listOf(
-        2015 to Day(id = 1, Solution.FULL, SantaFloorActivity::class.java),
-        2015 to Day(id = 2, Solution.FULL, ElvesPaperActivity::class.java),
-        2015 to Day(id = 3, Solution.FULL, SantaDirectionActivity::class.java),
-        2015 to Day(id = 4, Solution.FULL, MiningActivity::class.java),
-        2015 to Day(id = 5, Solution.FULL, NiceStringActivity::class.java),
-        2015 to Day(id = 6, Solution.FULL, FireHazardActivity::class.java),
-        2015 to Day(id = 7, Solution.FULL, WireActivity::class.java),
+        2015 to Day(id = 1, Solution.FULL, Year15Day1Activity::class.java),
+        2015 to Day(id = 2, Solution.FULL, Year15Day2Activity::class.java),
+        2015 to Day(id = 3, Solution.FULL, Year15Day3Activity::class.java),
+        2015 to Day(id = 4, Solution.FULL, Year15Day4Activity::class.java),
+        2015 to Day(id = 5, Solution.FULL, Year15Day5Activity::class.java),
+        2015 to Day(id = 6, Solution.FULL, Year15Day6Activity::class.java),
+        2015 to Day(id = 7, Solution.FULL, Year15Day7Activity::class.java),
+
         2021 to Day(id = 1, Solution.FULL, Year21Day1Activity::class.java),
         2021 to Day(id = 10, Solution.FULL, Year21Day10Activity::class.java)
     )

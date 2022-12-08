@@ -3,7 +3,7 @@ package sgtmelon.adventofcode.year15.day5.di
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
-import sgtmelon.adventofcode.year15.day5.NiceStringViewModel
+import sgtmelon.adventofcode.year15.day5.Year15Day5ViewModel
 import sgtmelon.adventofcode.year15.day5.useCase.IsNiceString1UseCase
 import sgtmelon.adventofcode.year15.day5.useCase.IsNiceString2UseCase
 
@@ -12,7 +12,7 @@ object Year15Day5InjectionModule {
     val module = module {
 
         viewModel {
-            NiceStringViewModel(get(named(INPUT)), get(), get(), get())
+            Year15Day5ViewModel(get(named(INPUT)), get(), get(), get())
         }
 
         factory(named(INPUT)) { Year15Day5Input().get() }

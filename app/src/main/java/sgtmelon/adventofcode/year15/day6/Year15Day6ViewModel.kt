@@ -5,7 +5,7 @@ import sgtmelon.adventofcode.staff.parent.solution.TextSolutionViewModelImpl
 import sgtmelon.adventofcode.year15.day6.useCase.ApplyInstructionUseCase
 import sgtmelon.adventofcode.year15.day6.useCase.GetInstructionUseCase
 
-class FireHazardViewModel(
+class Year15Day6ViewModel(
     private val input: String,
     private val splitText: SplitTextUseCase,
     private val getInstruction: GetInstructionUseCase,

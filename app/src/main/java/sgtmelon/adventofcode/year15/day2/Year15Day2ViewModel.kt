@@ -5,7 +5,7 @@ import sgtmelon.adventofcode.staff.parent.solution.TextSolutionViewModelImpl
 import sgtmelon.adventofcode.year15.day2.useCase.GetSquareUseCase
 import sgtmelon.adventofcode.year15.day2.useCase.GetSurfaceAreaUseCase
 
-class ElvesPaperViewModel(
+class Year15Day2ViewModel(
     private val input: String,
     private val splitText: SplitTextUseCase,
     private val getSquare: GetSquareUseCase,

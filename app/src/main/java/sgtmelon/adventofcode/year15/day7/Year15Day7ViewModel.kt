@@ -6,7 +6,7 @@ import sgtmelon.adventofcode.year15.day7.model.Command
 import sgtmelon.adventofcode.year15.day7.useCase.CalculateWiresUseCase
 import sgtmelon.adventofcode.year15.day7.useCase.GetCommandUseCase
 
-class WireViewModel(
+class Year15Day7ViewModel(
     private val input: String,
     private val splitText: SplitTextUseCase,
     private val getCommand: GetCommandUseCase,

@@ -9,12 +9,12 @@ import sgtmelon.adventofcode.staff.parent.solution.TextSolutionActivity
  *
  * https://adventofcode.com/2015/day/5
  */
-class NiceStringActivity : TextSolutionActivity() {
+class Year15Day5Activity : TextSolutionActivity() {
 
     override val titleId: Int = R.string.year2015day5_title
 
     override val subtitleId: Int = R.string.year2015day5_subtitle
 
-    override val viewModel by viewModel<NiceStringViewModel>()
+    override val viewModel by viewModel<Year15Day5ViewModel>()
 
 }

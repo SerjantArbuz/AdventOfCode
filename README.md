@@ -5,9 +5,12 @@ Puzzle solutions for: [adventofcode.com](https://adventofcode.com/)
 
 ### Attention
 
+You don't find here answers, only the way of how to get an answers _(or you need to download this
+project and install application to get them)_.
+
 Please don't use my solutions to pass any assignments _(for interview / school / whatever)_, I'm
 totally against it.\
-Use your own brains and logical ability to solve it.
+Use your own brains and logical ability to solve assignments.
 
 I know, you are a good **kitty**, and will use this repository only for moments where you are stuck
 or may be for improving yourself after finding a right answer. :wink:

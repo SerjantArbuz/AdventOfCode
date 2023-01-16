@@ -10,6 +10,7 @@ import sgtmelon.adventofcode.year15.day4.Year15Day4Activity
 import sgtmelon.adventofcode.year15.day5.Year15Day5Activity
 import sgtmelon.adventofcode.year15.day6.Year15Day6Activity
 import sgtmelon.adventofcode.year15.day7.Year15Day7Activity
+import sgtmelon.adventofcode.year15.day8.Year15Day8Activity
 import sgtmelon.adventofcode.year21.day1.Year21Day1Activity
 import sgtmelon.adventofcode.year21.day10.Year21Day10Activity
 
@@ -23,6 +24,7 @@ class GetYearsUseCase {
         2015 to Day(id = 5, Solution.FULL, Year15Day5Activity::class.java),
         2015 to Day(id = 6, Solution.FULL, Year15Day6Activity::class.java),
         2015 to Day(id = 7, Solution.FULL, Year15Day7Activity::class.java),
+        2015 to Day(id = 8, Solution.HALF, Year15Day8Activity::class.java),
 
         2021 to Day(id = 1, Solution.FULL, Year21Day1Activity::class.java),
         2021 to Day(id = 10, Solution.FULL, Year21Day10Activity::class.java)

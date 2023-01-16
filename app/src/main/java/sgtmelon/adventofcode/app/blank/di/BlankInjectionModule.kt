@@ -16,6 +16,6 @@ object BlankInjectionModule {
         factory(named(INPUT)) { BlankInput().get() }
     }
 
-    private const val INPUT = "YEAR_!_DAY_!_INPUT"
+    private const val INPUT = "YEAR_!!_DAY_!_INPUT"
 
 }

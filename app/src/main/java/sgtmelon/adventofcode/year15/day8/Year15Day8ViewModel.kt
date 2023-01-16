@@ -9,7 +9,9 @@ class Year15Day8ViewModel(
 ) : TextSolutionViewModelImpl() {
 
     override suspend fun calculatePuzzle() {
-        firstValue.postValue("lineCount: ${splitText(input).size}")
+        val list = splitText(input)
+
+        firstValue.postValue("lineCount: ${list.size}")
         secondValue.postValue("2")
     }
 }

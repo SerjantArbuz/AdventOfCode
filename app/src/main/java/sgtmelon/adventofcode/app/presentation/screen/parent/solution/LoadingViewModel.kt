@@ -4,6 +4,6 @@ import androidx.lifecycle.LiveData
 
 interface LoadingViewModel {
 
-    val loading: LiveData<Boolean>
+    val isLoading: LiveData<Boolean>
 
 }

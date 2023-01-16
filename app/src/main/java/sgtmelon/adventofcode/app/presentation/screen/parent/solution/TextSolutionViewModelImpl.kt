@@ -8,7 +8,7 @@ import sgtmelon.adventofcode.app.utils.launchBack
 abstract class TextSolutionViewModelImpl : ViewModel(),
     TextSolutionViewModel {
 
-    override val loading: MutableLiveData<Boolean> = MutableLiveData(true)
+    override val isLoading: MutableLiveData<Boolean> = MutableLiveData(true)
 
     override var startTime: Long = 0
 
@@ -30,7 +30,7 @@ abstract class TextSolutionViewModelImpl : ViewModel(),
             }
             endTime = getTime()
 
-            loading.postValue(false)
+            isLoading.postValue(false)
             spendTime.postValue(endTime - startTime)
         }
     }

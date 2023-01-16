@@ -11,7 +11,7 @@ abstract class TextSolutionActivity : SolutionActivity() {
         super.setupObservers()
 
         viewModel.spendTime.observe(this) { setTime(it) }
-        viewModel.loading.observe(this) { changeProgress(it) }
+        viewModel.isLoading.observe(this) { changeProgress(it) }
         viewModel.firstValue.observe(this) { setFirstText(it.toString()) }
         viewModel.secondValue.observe(this) { setSecondText(it.toString()) }
     }

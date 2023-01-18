@@ -22,4 +22,7 @@
     <string name="year2015day7_title">Assembly wires</string>
     <string name="year2015day7_subtitle">Help Bobby with assembling the circuit</string>
 
+    <string name="year2015day9_title">All in a Single Night</string>
+    <string name="year2015day9_subtitle">Find shortest distance of chain?</string>
+
 </resources>

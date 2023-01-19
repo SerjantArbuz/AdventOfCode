@@ -5,9 +5,9 @@ import sgtmelon.adventofcode.R
 import sgtmelon.adventofcode.app.presentation.screen.parent.solution.TextSolutionActivity
 
 /**
- * YEAR? Day NUMBER?. Final time: ?.
+ * 2015 Day 9. Final time: ~2h.
  *
- * URL_LINK?
+ * https://adventofcode.com/2015/day/9
  */
 class Year15Day9Activity : TextSolutionActivity() {
 

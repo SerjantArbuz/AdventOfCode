@@ -23,6 +23,6 @@
     <string name="year2015day7_subtitle">Help Bobby with assembling the circuit</string>
 
     <string name="year2015day9_title">All in a Single Night</string>
-    <string name="year2015day9_subtitle">Find shortest distance of chain?</string>
+    <string name="year2015day9_subtitle">Find min/max distances of chain?</string>
 
 </resources>

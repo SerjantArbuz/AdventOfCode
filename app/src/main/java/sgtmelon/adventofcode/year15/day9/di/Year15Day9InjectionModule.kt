@@ -3,9 +3,9 @@ package sgtmelon.adventofcode.year15.day9.di
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
+import sgtmelon.adventofcode.app.domain.GetPermutationsUseCase
 import sgtmelon.adventofcode.year15.day9.Year15Day9ViewModel
-import sgtmelon.adventofcode.year15.day9.useCase.GetLengthUseCase
-import sgtmelon.adventofcode.year15.day9.useCase.GetUniqueSequencesUseCase
+import sgtmelon.adventofcode.year15.day9.useCase.GetMinMaxLengthUseCase
 import sgtmelon.adventofcode.year15.day9.useCase.ParseDistanceUseCase
 
 object Year15Day9InjectionModule {
@@ -18,8 +18,8 @@ object Year15Day9InjectionModule {
 
         factory(named(INPUT)) { Year15Day9Input().get() }
         factory { ParseDistanceUseCase() }
-        factory { GetUniqueSequencesUseCase() }
-        factory { GetLengthUseCase() }
+        factory { GetPermutationsUseCase<String>() }
+        factory { GetMinMaxLengthUseCase() }
     }
 
     private const val INPUT = "YEAR_15_DAY_9_INPUT"

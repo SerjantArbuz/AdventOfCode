@@ -24,7 +24,7 @@ class GetYearsUseCase {
         2015 to Day(id = 5, Solution.FULL, Year15Day5Activity::class.java),
         2015 to Day(id = 6, Solution.FULL, Year15Day6Activity::class.java),
         2015 to Day(id = 7, Solution.FULL, Year15Day7Activity::class.java),
-        2015 to Day(id = 9, Solution.HALF, Year15Day9Activity::class.java),
+        2015 to Day(id = 9, Solution.FULL, Year15Day9Activity::class.java),
 
         2021 to Day(id = 1, Solution.FULL, Year21Day1Activity::class.java),
         2021 to Day(id = 10, Solution.FULL, Year21Day10Activity::class.java)

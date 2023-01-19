@@ -34,7 +34,7 @@ class GetMinMaxLengthUseCase {
             val nextItem = permutation.getOrNull(index = i + 1) ?: break
 
             length += distanceMap[item to nextItem] ?: distanceMap[nextItem to item]
-                    ?: throw NullPointerException("Unknown pair: $item, $nextItem")
+                    ?: throw NullPointerException("Unknown pair: $item/$nextItem")
         }
 
         return length

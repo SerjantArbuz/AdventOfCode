@@ -44,6 +44,6 @@ class Year15Day9ViewModel(
         }
 
         firstValue.postValue(lengthMap.min().toString())
-        secondValue.postValue("2")
+        secondValue.postValue(lengthMap.max().toString())
     }
 }
